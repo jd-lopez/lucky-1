@@ -213,8 +213,14 @@
   .top-0 {
     top: calc(var(--spacing) * 0);
   }
+  .top-15 {
+    top: calc(var(--spacing) * 15);
+  }
   .top-19 {
     top: calc(var(--spacing) * 19);
+  }
+  .top-25 {
+    top: calc(var(--spacing) * 25);
   }
   .top-30 {
     top: calc(var(--spacing) * 30);
