@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+@import "tailwindcss";
+
+@theme {
+  --font-roboto: "Roboto", sans-serif;
+}
+
+.button {
+  @apply text-white font-bold rounded-md p-1 md:px-4 md:py-1 bg-gradient-to-r from-purple-700 via-indigo-500 to-purple-700 lg:text-xl;
+}
+.eachNavLink {
+  @apply px-4 py-3 border-0 rounded-md lg:p-2 lg:text-lg;
+}
+.hoverEffect {
+  @apply md:hover:text-blue-600 md:hover:-translate-y-2 transition-all duration-200 delay-75 hover:shadow-2xs hover:bg-cyan-50;
+}
+
+.sectionChildren {
+  @apply flex flex-col gap-5 px-6 lg:px-20 py-24 text-sm lg:text-lg;
+}
+
+.eachStep {
+  @apply lg:flex lg:flex-col;
+}
+.card {
+  @apply flex flex-col items-start font-roboto text-base border border-gray-200 shadow-md p-3 rounded-md flex-1 min-w-[200px] lg:h-60;
+}
+
+.serveCard {
+  @apply flex flex-col lg:flex-row justify-between items-center gap-8 text-sm lg:font-roboto lg:text-base;
+}
+
+.serveCard:nth-child(even) {
+  @apply lg:flex-row-reverse;
+}
