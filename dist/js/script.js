@@ -74,3 +74,21 @@ function hideMenu() {
 document.querySelectorAll("img").forEach((img) => {
   img.setAttribute("loading", "lazy");
 });
+
+//modal script
+
+const modal = document.querySelector(".modal");
+const openModal = document.querySelectorAll(".open-button");
+const closeModal = document.querySelector(".closeModal");
+
+openModal.forEach((modalBtn) => {
+  modalBtn.addEventListener("click", () => {
+    modal.showModal();
+    modal.classList.add("flex");
+  });
+});
+
+closeModal.addEventListener("click", () => {
+  modal.close();
+  modal.classList.remove("flex");
+});

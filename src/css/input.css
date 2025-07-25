@@ -7,13 +7,13 @@
 }
 
 .button {
-  @apply text-white font-bold rounded-md p-1 md:px-4 md:py-1 bg-gradient-to-r from-purple-700 via-indigo-500 to-purple-700 lg:text-xl;
+  @apply text-white font-medium rounded-md p-1 md:px-4 md:py-1 bg-blue-700 lg:text-lg lg:py-0.5 lg:hover:bg-blue-900;
 }
 .eachNavLink {
   @apply px-4 py-3 border-0 rounded-md lg:p-2 lg:text-lg;
 }
 .hoverEffect {
-  @apply md:hover:text-blue-600 md:hover:-translate-y-2 transition-all duration-200 delay-75 hover:shadow-2xs hover:bg-cyan-50;
+  @apply lg:hover:text-blue-600 lg:hover:-translate-y-2 transition-all duration-200 delay-75 lg:hover:shadow-2xs lg:hover:bg-cyan-50;
 }
 
 .sectionChildren {

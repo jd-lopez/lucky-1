@@ -15,7 +15,7 @@
 </head>
 
 <body class="relative font-roboto text-base">
-    <header id="myHeader" class="px-5 py-2 shadow-xl bg-white/5 backdrop-blur-md fixed top-0 left-0  w-full z-70 
+    <header id="myHeader" class="px-5 py-2 shadow-xl bg-white/0 backdrop-blur-md fixed top-0 left-0  w-full z-70 
     md:px-15 md:shadow-xl">
         <div class="flex justify-between items-center">
             <div class="size-15 flex flex-col items-center
@@ -48,8 +48,7 @@
                 <a href="service.html" class="eachNavLink hoverEffect text-inherit">Our Services</a>
                 <a href="#" class="eachNavLink hoverEffect text-inherit">How it works</a>
                 <a href="" class="eachNavLink hoverEffect text-inherit">About Us</a>
-                <a href="mailto:lucky1trans@gmail.com"
-                    class="eachNavLink hoverEffect  bg-blue-700 text-white">Contact</a>
+                <button class="open-button button">Contact Us</button>
             </nav>
         </div>
     </header>
@@ -61,15 +60,15 @@
 
 
     <div id="hero" class="relative w-full">
-        <div class="w-full lgh-120">
+        <div class="w-full h-72  lg:h-120 ">
 
-            <img src="images/hero-track.jpeg" class="object-cover w-full md:h-full" alt="">
+            <img src="images/hero-track.jpeg" class="object-cover w-full h-full md:h-full" alt="">
         </div>
 
 
 
         <div class="inset-0 absolute bg-black/20 z-10"></div>
-        <div class="max-w-7xl mx-auto text-sm absolute top-15 left-0 right-0 p-4 text-white flex flex-col justify-between gap-14 items-center z-20
+        <div class="max-w-7xl mx-auto text-sm absolute top-20 left-0 right-0 p-4 text-white flex flex-col justify-between gap-14 items-center z-20
             md:top-25 md:px-50 md:gap-20">
             <h1 class="font-bold text-xl 
             md:text-3xl">"Nationwide Transport Brokerage You Can Trust"
@@ -82,8 +81,24 @@
                 across the U.S.</p>
             <div class="flex justify-between gap-8">
                 <button class="button"><a href="mailto:lucky1trans@gmail.com">Email Us</a></button>
-                <button class="button"><a href="tel:+50588640929">Call Us</a></button>
+                <button class="button open-button">Call Us</button>
             </div>
+
+            <dialog
+                class="modal shadow-md open:backdrop:bg-gradient-to-r open:backdrop:from-blue-400/20 open:backdrop:to-red-200/20  flex-col items-center justify-between rounded-md top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 p-2 gap-4 z-100 bg-blue-50">
+                <div class="flex flex-col gap-4 items-center ">
+                    <h2 class="self-center text-lg">Talk to us in English or Spanish</h2>
+
+                    <div class="">
+                        <a class="button" href="tel:786-457-1448"><i class="fa-solid fa-phone mr-2"></i>English</a>
+
+                        <a class="button" href="tel:305-720-0710"><i class="fa-solid fa-phone mr-2"></i>Español</a>
+
+                    </div>
+                </div>
+                <button class="closeModal bg-blue-700 text-white font-bold self-end p-0.5">Close</button>
+            </dialog>
+
         </div>
     </div>
 
@@ -94,7 +109,7 @@
     lg:py-16 lg:px-16
     bg-radial from-blue-100 via-purple-100/90">
         <section class="bg-white  mx-6  
-        lg:mx-14 lg:px-0">
+        lg:mx-14 lg:px-0 lg:shadow">
             <div class="sectionChildren">
                 <h2 class="self-center text-3xl font-bold">
                     Who We Are</h2>
@@ -222,8 +237,8 @@
                 </ul>
 
                 <div class="flex justify-center gap-8 mt-8">
-                    <button class="button"><a href="mailto:lucky1trans@gmail.com">Email Us</a></button>
-                    <button class="button"><a href="tel:+50588640929">Call Us</a></button>
+                    <button class="button">Email Us</button>
+                    <button class="open-button button">Call Us</button>
                 </div>
             </div>
         </section>
