@@ -24,7 +24,9 @@
   @apply lg:flex lg:flex-col;
 }
 .card {
-  @apply flex flex-col items-start font-roboto text-base border border-gray-200 shadow-md p-3 rounded-md flex-1 min-w-[200px] lg:h-60;
+  @apply flex flex-col items-start font-roboto text-base p-3 mt-14 rounded-md flex-1 min-w-[200px] lg:h-60;
+
+  box-shadow: 0 0 2px 5px hsla(0, 0%, 0%, 0.053);
 }
 
 .serveCard {
