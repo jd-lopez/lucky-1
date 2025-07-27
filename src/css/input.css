@@ -70,3 +70,14 @@
 .scroll-animate.visible {
   @apply translate-x-0  opacity-100;
 }
+
+.inputWrapper {
+  @apply flex flex-col;
+}
+
+.label {
+  @apply text-sm font-black;
+}
+.inputField {
+  @apply outline-0 border border-gray-400 rounded-md p-1 text-sm bg-gray-100;
+}
