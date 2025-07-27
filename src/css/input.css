@@ -13,7 +13,8 @@
   @apply px-4 py-3 border-0 rounded-md lg:p-2 lg:text-lg;
 }
 .hoverEffect {
-  @apply lg:hover:text-blue-600 lg:hover:-translate-y-2 transition-all duration-200 delay-75 lg:hover:shadow-2xs lg:hover:bg-cyan-50;
+  @apply lg:hover:text-blue-600   lg:hover:shadow-2xs lg:hover:bg-cyan-50 lg:group-hover:[&:not(:hover)]:text-gray-400
+  transition-all delay-100 duration-75;
 }
 
 .sectionChildren {
@@ -30,9 +31,42 @@
 }
 
 .serveCard {
-  @apply flex flex-col lg:flex-row justify-between items-center gap-8 text-sm lg:font-roboto lg:text-base;
+  @apply flex flex-col lg:flex-row justify-between items-center gap-14 text-sm lg:font-roboto lg:text-base;
 }
 
 .serveCard:nth-child(even) {
   @apply lg:flex-row-reverse;
+}
+
+/*Scroll animation How it works*/
+
+.vert-scroll-animate {
+  @apply opacity-0 transition-all duration-75 delay-150 ease-in-out;
+}
+
+.vert-scroll-animate:nth-child(odd) {
+  @apply translate-x-40 lg:translate-y-80;
+}
+.vert-scroll-animate:nth-child(even) {
+  @apply -translate-x-40 lg:-translate-y-80;
+}
+
+.vert-scroll-animate.visible {
+  @apply translate-0 opacity-100;
+}
+
+/*Scroll animation Who we serve*/
+.scroll-animate {
+  @apply transition-all opacity-0 duration-300 delay-100 ease-in;
+}
+
+.scroll-animate:nth-child(odd) {
+  @apply translate-x-40 lg:translate-x-80;
+}
+.scroll-animate:nth-child(even) {
+  @apply -translate-x-40 lg:-translate-x-80;
+}
+
+.scroll-animate.visible {
+  @apply translate-x-0  opacity-100;
 }

@@ -92,3 +92,50 @@ closeModal.addEventListener("click", () => {
   modal.close();
   modal.classList.remove("flex");
 });
+
+//verticall scroll for How it works section
+
+const howCards = document.querySelectorAll(".vert-scroll-animate");
+const howParent = document.querySelector(".howParent");
+
+const howObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        howCards.forEach((card, index) => {
+          setTimeout(() => {
+            card.classList.add("visible");
+          }, index * 500);
+        });
+      } else {
+        howCards.forEach((card) => {
+          card.classList.remove("visible");
+        });
+      }
+    });
+  },
+  { threshold: 0.1 }
+);
+
+//scroll animation
+
+const items = document.querySelectorAll(".scroll-animate");
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      } else {
+        entry.target.classList.remove("visible");
+      }
+    });
+  },
+  { threshold: 0.1 }
+);
+
+howObserver.observe(howParent);
+
+items.forEach((element) => {
+  observer.observe(element);
+});
