@@ -9,8 +9,11 @@
     <link rel="icon" href="images/Logo_lucky.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         referrerpolicy="no-referrer" />
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css" />
+    <script src="https://unpkg.com/i18next@23.0.1/i18next.min.js" defer></script>
     <script src="js/script.js" defer></script>
+
+
 
 </head>
 
@@ -39,17 +42,32 @@
 
 
 
+
             <nav id="myNav" class="text-black
-            flex flex-col absolute shadow-xl bg-white backdrop-blur-2xl top-24 -right-42 px-4
+            flex flex-col items-center absolute shadow-xl bg-white backdrop-blur-2xl top-24 -right-42 pb-4 pr-8 
             md:top-29
             lg:flex lg:flex-row lg:justify-between lg:px-3 lg:text-sm font-bold lg:static lg:bg-inherit lg:backdrop-blur-none lg:shadow-none lg:translate-x-0 lg:text-white
-            lg:transition-all lg:duration-150 lg:delay-100
+            lg:transition-all lg:duration-150 lg:delay-100 gap-4
             group
             ">
                 <a href="index.html" class="eachNavLink hoverEffect text-inherit ">Home</a>
                 <a href="about-us.html" class="eachNavLink hoverEffect text-inherit">About Us</a>
                 <a href="contact.html" class="eachNavLink hoverEffect text-inherit">Contact Us</a>
-                <button class="open-button button">Talk to US</button>
+
+
+
+                <div id="flag-container" class="flex items-center gap-2 px-2">
+
+                    <div class="">
+                        <span id="usFlag" class="fi fi-us"></span>
+                        <span id="esFlag" class=" fi-es"></span>
+                    </div>
+                    <select name="lang" id="lang-select" class="outline-0 open:bg-blue-400">
+                        <option value="en" selected>English</option>
+                        <option value="es">Español</option>
+                    </select>
+                </div>
+
             </nav>
         </div>
     </header>
@@ -61,7 +79,7 @@
 
 
     <div id="hero" class="relative w-full">
-        <div class="w-full h-72  lg:h-120 ">
+        <div class="w-full h-90  lg:h-140 ">
 
             <img src="images/car-carrier-trailer.jpg" class="object-cover w-full h-full md:h-full" alt="">
         </div>
@@ -71,11 +89,9 @@
         <div class="inset-0 absolute bg-black/20 z-10"></div>
         <div class="max-w-7xl mx-auto text-sm absolute top-20 left-0 right-0 p-4 text-white flex flex-col justify-between gap-14 items-center z-20
             md:top-25 md:px-50 md:gap-20">
-            <h1 class="font-bold text-xl 
-            md:text-3xl">"Nationwide Transport Brokerage You Can Trust"
-
-            </h1>
-            <p class="text-sm text-gray-50 hidden
+            <h1 data-i18n="hero" class="font-bold text-xl 
+            md:text-3xl"></h1>
+            <p class="text-sm text-gray-50 
             md:text-sm md:block 
             lg:text-lg">We connect shippers with fully insured, reliable carriers to move motorcycles, ATVs,
                 UTVs, RVs, and heavy equipment

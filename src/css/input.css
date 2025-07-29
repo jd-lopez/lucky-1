@@ -81,3 +81,6 @@
 .inputField {
   @apply outline-0 border border-gray-400 rounded-md p-1 text-sm bg-gray-100;
 }
+select {
+  appearance: none;
+}

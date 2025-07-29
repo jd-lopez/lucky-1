@@ -139,3 +139,90 @@ howObserver.observe(howParent);
 items.forEach((element) => {
   observer.observe(element);
 });
+
+//language selection
+
+const selectLanguage = document.getElementById("lang-select");
+
+const heroText = {
+  en: {
+    translation: {
+      hero: "Nationwide Transport Brokerage You Can Trust",
+    },
+  },
+  es: {
+    translation: {
+      hero: "Una agencia de transporte a nivel nacional en la que puede confiar",
+    },
+  },
+};
+
+const savedLang = localStorage.getItem("lang") || "en";
+selectLanguage.value = savedLang; // ✅ sets the correct option
+
+const activeFlag = localStorage.getItem("activeFlag") || "us";
+
+if (activeFlag === "us") {
+  document.getElementById("usFlag").classList.add("fi");
+  document.getElementById("esFlag").classList.remove("fi");
+} else {
+  document.getElementById("esFlag").classList.add("fi");
+  document.getElementById("usFlag").classList.remove("fi");
+}
+
+i18next.init(
+  {
+    lng: localStorage.getItem("lang") || "en",
+    debug: false,
+    resources: heroText,
+  },
+  function (err, t) {
+    updateContent();
+  }
+);
+
+function updateContent() {
+  document.querySelectorAll("[data-i18n]").forEach((element) => {
+    const key = element.getAttribute("data-i18n");
+
+    element.innerHTML = i18next.t(key);
+  });
+}
+
+document.getElementById("lang-select").addEventListener("change", () => {
+  setTimeout(() => {
+    const newLang = selectLanguage.value;
+    console.log(newLang);
+
+    i18next.changeLanguage(newLang, () => {
+      localStorage.setItem("lang", newLang);
+      updateContent();
+    });
+
+    if (newLang === "en") {
+      document.getElementById("usFlag").classList.add("fi");
+      document.getElementById("esFlag").classList.remove("fi");
+      localStorage.setItem("activeFlag", "us");
+    } else if (newLang === "es") {
+      document.getElementById("esFlag").classList.add("fi");
+      document.getElementById("usFlag").classList.remove("fi");
+      localStorage.setItem("activeFlag", "es");
+    }
+  }, 600);
+});
+
+// function setLanguage() {
+//   let currentLanguage = selectLanguage.value;
+
+//   console.log(currentLanguage);
+
+//   if (currentLanguage === "en") {
+//     document.getElementById("usFlag").classList.add("fi");
+//     document.getElementById("esFlag").classList.remove("fi");
+//   } else if (currentLanguage === "es") {
+//     document.getElementById("esFlag").classList.add("fi");
+//     document.getElementById("usFlag").classList.remove("fi");
+//   }
+// }
+
+// selectLanguage.addEventListener("change", setLanguage);
