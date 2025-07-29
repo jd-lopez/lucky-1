@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css" />
-
+    <script src="https://unpkg.com/i18next@23.0.1/i18next.min.js" defer></script>
     <script src="js/script.js" defer></script>
 
 </head>
@@ -61,7 +61,7 @@
                     </div>
                     <select name="lang" id="lang-select" class="outline-0 open:bg-blue-400">
                         <option value="en" selected>English</option>
-                        <option value="es">Spanish</option>
+                        <option value="es">Español</option>
                     </select>
                 </div>
 
@@ -86,10 +86,8 @@
         <div class="inset-0 absolute bg-black/20 z-10"></div>
         <div class="max-w-7xl mx-auto text-sm absolute top-20 left-0 right-0 p-4 text-white flex flex-col justify-between gap-14 items-center z-20
             md:top-25 md:px-50 md:gap-20">
-            <h1 class="font-bold text-xl 
-            md:text-3xl">"Nationwide Transport Brokerage You Can Trust"
-
-            </h1>
+            <h1 data-i18n="hero" class="font-bold text-xl 
+                        md:text-3xl"></h1>
             <p class="text-sm text-gray-50 hidden
             md:text-sm md:block 
             lg:text-lg">We connect shippers with fully insured, reliable carriers to move motorcycles, ATVs,

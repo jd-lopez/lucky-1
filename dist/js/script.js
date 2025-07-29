@@ -98,24 +98,28 @@ closeModal.addEventListener("click", () => {
 const howCards = document.querySelectorAll(".vert-scroll-animate");
 const howParent = document.querySelector(".howParent");
 
-const howObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        howCards.forEach((card, index) => {
-          setTimeout(() => {
-            card.classList.add("visible");
-          }, index * 500);
-        });
-      } else {
-        howCards.forEach((card) => {
-          card.classList.remove("visible");
-        });
-      }
-    });
-  },
-  { threshold: 0.1 }
-);
+if (howParent && howCards.length) {
+  const howObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          howCards.forEach((card, index) => {
+            setTimeout(() => {
+              card.classList.add("visible");
+            }, index * 500);
+          });
+        } else {
+          howCards.forEach((card) => {
+            card.classList.remove("visible");
+          });
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
+
+  howObserver.observe(howParent);
+}
 
 //scroll animation
 
@@ -133,8 +137,6 @@ const observer = new IntersectionObserver(
   },
   { threshold: 0.1 }
 );
-
-howObserver.observe(howParent);
 
 items.forEach((element) => {
   observer.observe(element);
@@ -159,6 +161,8 @@ const heroText = {
 
 const savedLang = localStorage.getItem("lang") || "en";
 selectLanguage.value = savedLang; // ✅ sets the correct option
+
+console.log(savedLang);
 
 const activeFlag = localStorage.getItem("activeFlag") || "us";
 
@@ -208,7 +212,9 @@ document.getElementById("lang-select").addEventListener("change", () => {
       document.getElementById("usFlag").classList.remove("fi");
       localStorage.setItem("activeFlag", "es");
     }
-  }, 600);
+
+    hideMenu();
+  }, 400);
 });
 
 // function setLanguage() {
