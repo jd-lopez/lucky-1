@@ -16,22 +16,22 @@
 </head>
 
 <body class="relative font-roboto text-base h-dvh overflow-x-hidden">
-    <header id="myHeader" class="px-5 py-2 shadow-xl bg-white/0 backdrop-blur-md fixed top-0 left-0  w-full z-70 
-    md:px-15 md:shadow-xl">
+    <header id="myHeader" class="px-5 py-2 shadow-xl bg-white  fixed top-0 w-full z-70 
+            md:px-15 md:shadow-xl border-b-2 border-b-cyan-600">
         <div class="flex justify-between items-center">
             <div class="size-20 flex flex-col items-center
-                        md:size-25">
+                                md:size-25">
                 <img class="" src="images/Logo_lucky.png" alt="">
 
             </div>
 
             <div id="hamburgerContainer" class="lg:hidden size-10">
-                <svg id="burgerIcon" class="size-10 text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
+                <svg id="burgerIcon" class="size-10 text-black" xmlns="http://www.w3.org/2000/svg" fill="none"
                     viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round"
                         d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                 </svg>
-                <svg id="closeIcon" class="hidden size-10 text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
+                <svg id="closeIcon" class="hidden size-10 text-black" xmlns="http://www.w3.org/2000/svg" fill="none"
                     viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
                 </svg>
@@ -41,19 +41,20 @@
 
 
             <nav id="myNav" class="text-black
-                        flex flex-col items-center absolute shadow-xl bg-white backdrop-blur-2xl top-24 -right-42 pb-4 
+                        flex flex-col items-center absolute  shadow-xl bg-white backdrop-blur-2xl top-24 -right-52 pb-4 pr-8 
                         md:top-29
-                        lg:flex lg:flex-row lg:justify-between lg:px-3 lg:text-sm font-bold lg:static lg:bg-inherit lg:backdrop-blur-none lg:shadow-none lg:translate-x-0 lg:text-white
+                        lg:flex lg:flex-row lg:justify-between lg:px-3 lg:text-sm font-bold lg:static lg:bg-inherit lg:backdrop-blur-none lg:shadow-none lg:translate-x-0 
                         lg:transition-all lg:duration-150 lg:delay-100 gap-4
                         group
                         ">
-                <a href="index.html" class="eachNavLink hoverEffect text-inherit ">Home</a>
-                <a href="about-us.html" class="eachNavLink hoverEffect text-inherit">About Us</a>
-                <a href="contact.html" class="eachNavLink hoverEffect text-inherit">Contact Us</a>
+                <a data-i18n="common.nav.home" href="index.html" class="eachNavLink hoverEffect text-inherit ">Home</a>
+                <a data-i18n="common.nav.about" href="about-us.html" class="eachNavLink hoverEffect text-inherit">About
+                    Us</a>
+                <a data-i18n="common.nav.contact" href="contact.html"
+                    class="eachNavLink hoverEffect text-inherit">Contact
+                    Us</a>
 
-
-
-                <div id="flag-container" class="flex items-center gap-2 px-2">
+                <div id="flag-container" class="flex items-center gap-2 px-2 text-black">
 
                     <div class="">
                         <span id="usFlag" class="fi fi-us"></span>
@@ -67,65 +68,23 @@
 
             </nav>
         </div>
+
+
     </header>
-
-
 
     <div id="overlay" class="hidden fixed h-dvh top-19 md:top-29 bottom-0 left-0 right-0 z-60 bg-black/50
     lg:hidden "></div>
 
 
-    <div id="hero" class="relative w-full">
-        <div class="w-full h-72  lg:h-120 ">
-
-            <img src="images/car-carrier-trailer.jpg" class="object-cover w-full h-full md:h-full" alt="">
-        </div>
-
-
-
-        <div class="inset-0 absolute bg-black/20 z-10"></div>
-        <div class="max-w-7xl mx-auto text-sm absolute top-20 left-0 right-0 p-4 text-white flex flex-col justify-between gap-14 items-center z-20
-            md:top-25 md:px-50 md:gap-20">
-            <h1 data-i18n="hero" class="font-bold text-xl 
-                        md:text-3xl"></h1>
-            <p class="text-sm text-gray-50 hidden
-            md:text-sm md:block 
-            lg:text-lg">We connect shippers with fully insured, reliable carriers to move motorcycles, ATVs,
-                UTVs, RVs, and heavy equipment
-                across the U.S.</p>
-            <div class="flex justify-between gap-8">
-                <button class="button"><a href="mailto:lucky1trans@gmail.com">Email Us</a></button>
-                <button class="button open-button">Call Us</button>
-            </div>
-
-            <dialog class="modal shadow-md open:backdrop:bg-gradient-to-r open:backdrop:from-blue-400/20 open:backdrop:to-red-200/20  flex-col items-center justify-between rounded-md top-20 left-10 p-2 gap-4 z-100 bg-blue-50 w-80 h-60
-                lg:w-160 lg:left-80">
-                <div class="flex flex-col gap-4 items-center">
-                    <h2 class="self-center text-lg">Talk to us in English or Spanish</h2>
-
-                    <div class="">
-                        <a class="button" href="tel:786-457-1448"><i class="fa-solid fa-phone mr-2"></i>English</a>
-
-                        <a class="button" href="tel:305-720-0710"><i class="fa-solid fa-phone mr-2"></i>Español</a>
-
-                    </div>
-                </div>
-                <button class="closeModal bg-blue-700 text-white font-bold self-end p-1 rounded-md">Close</button>
-            </dialog>
-
-        </div>
-    </div>
-
-    <div class="h-1 bg-gradient-to-r from-indigo-600 via-red-600 to-lime-500"></div>
-
-
     <main class="font-roboto text-base
-     overflow-x-hidden">
-        <section class="bg-white px-6 lg:px-20 py-6">
-            <div class="flex flex-col lg:w-2/4">
-                <h1 class="text-center text-lg font-bold">Contact us and get a quota for free.</h1>
-                <hr class="h-1 w-38 self-center bg-gradient-to-r from-red-500 to-indigo-500 mb-8">
-                <p class="text-sm">We're here to help. Reach out to us with any questions or inquiries. Fill out the
+     overflow-hidden mt-24">
+        <section class=" px-6 lg:px-20 py-6 bg-no-repeat">
+            <div class="flex flex-col lg:w-2/4 mt-14">
+                <h1 data-i18n="contact.heading" class="text-center text-2xl font-bold">Contact us and get a quota for
+                    free.</h1>
+                <hr class="h-1 w-80 self-center bg-gradient-to-r from-red-500 to-indigo-500 mb-8">
+                <p data-i18n="contact.description" class="">We're here to help. Reach out to us with any questions or
+                    inquiries. Fill out the
                     following form to
                     get a quota. We will reach out to you.</p>
 
@@ -133,44 +92,47 @@
                     method="POST">
 
                     <div class="inputWrapper">
-                        <label class="label" for="inputName">Name</label>
+                        <label data-i18n="contact.form.name" class="label" for="inputName">Name</label>
                         <input class="inputField" id="inputName" type="text" name="name" required>
                     </div>
                     <div class="inputWrapper">
-                        <label class="label" for="inputEmail">Email</label>
+                        <label data-i18n="contact.form.email" class="label" for="inputEmail">Email</label>
                         <input class="inputField" id="inputEmail" type="email" name="email" required>
                     </div>
                     <div class="inputWrapper">
-                        <label class="label" for="inputPhone">Phone</label>
+                        <label data-i18n="contact.form.phone" class="label" for="inputPhone">Phone</label>
                         <input class="inputField" id="inputPhone" type="tel" name="phone" required>
                     </div>
                     <div class="inputWrapper">
-                        <label class="label" for="inputVehicle">Vehicle Type</label>
+                        <label data-i18n="contact.form.vehicle" class="label" for="inputVehicle">Vehicle Type</label>
                         <input class="inputField" id="inputVehicle" type="text" name="Vehicle_type" required>
                     </div>
                     <div class="inputWrapper">
-                        <label class="label" for="pickupInput">Pickup location</label>
+                        <label data-i18n="contact.form.pickup" class="label" for="pickupInput">Pickup location</label>
                         <input class="inputField" id="pickupInput" type="text" name="Pickup_location" required>
                     </div>
                     <div class="inputWrapper">
-                        <label class="label" for="inputDelivery">Delivery Location</label>
+                        <label data-i18n="contact.form.delivery" class="label" for="inputDelivery">Delivery
+                            Location</label>
                         <input class="inputField" id="inputDelivery" type="text" name="delivery_location" required>
                     </div>
                     <div class="inputWrapper">
-                        <label class="label" for="inputTransport">Preferred Transport type</label>
+                        <label data-i18n="contact.form.transport" class="label" for="inputTransport">Preferred Transport
+                            type</label>
                         <input class="inputField" id="inputTransport" type="text" name="preferred_transport_type"
                             required>
                     </div>
                     <div class="inputWrapper">
-                        <label class="label" for="languageInput">Preferred Language</label>
+                        <label data-i18n="contact.form.language" class="label" for="languageInput">Preferred
+                            Language</label>
                         <input class="inputField" id="languageInput" type="text" name="preferred_language" required>
                     </div>
 
                     <div class="inputWrapper">
-                        <label class="label" for="comment">Comments (optional)</label>
+                        <label data-i18n="contact.form.comments" class="label" for="comment">Comments (optional)</label>
 
                         <textarea class="inputField" name="comment" id="comment" rows="5" cols="33"
-                            placeholder="Additional comments"></textarea>
+                            data-i18n-placeholder="contact.form.commentsPlaceholder" placeholder=""></textarea>
                     </div>
 
                     <div class="flex justify-between">
@@ -179,19 +141,26 @@
                             Form</button>
                     </div>
                 </form>
+                <p data-i18n="contact.form.directEmail" class="mt-6 text-sm">Prefer to email us directly? <a
+                        class="text-blue-600 visited:text-red-800" href="mailto:lucky1trans@gmail.com">Click
+                        here</a>.</p>
             </div>
         </section>
 
         <section class="bg-white px-6 lg:px-20 py-6">
             <div class="flex flex-col">
-                <h1 class="self-center text-lg font-bold">Our Contact information</h1>
+                <h1 data-i18n="contact.info.heading" class="self-center text-lg font-bold">Our Contact information</h1>
                 <hr class="h-1 w-38 self-center bg-gradient-to-r from-red-500 to-indigo-500 mb-8">
 
                 <div class="flex flex-col items-left gap-3">
-                    <p> <i class="fa-solid fa-phone mr-4"></i> <strong>Phone:</strong> English 786-457-1448 & Spanish
+                    <p data-i18n="contact.info.phone"> <i class="fa-solid fa-phone mr-4"></i> <strong>Phone:</strong>
+                        English 786-457-1448 & Spanish
                         305-720-0710</p>
-                    <p><i class="fa-solid fa-envelope mr-4"></i><Strong>Email:</Strong> lucky1trans@gmail.com</p>
-                    <p><i class="fa-solid fa-location-dot mr-4"></i><strong>Adress:</strong> 20280 SW 190TH ST MIAMI, FL
+                    <p data-i18n="contact.info.email"><i class="fa-solid fa-envelope mr-4"></i><Strong>Email:</Strong>
+                        lucky1trans@gmail.com</p>
+                    <p data-i18n="contact.info.address"><i
+                            class="fa-solid fa-location-dot mr-4"></i><strong>Adress:</strong> 20280 SW 190TH ST MIAMI,
+                        FL
                         33187</p>
                 </div>
 
@@ -227,15 +196,15 @@
 
 
             <div class="flex flex-col items-center gap-2">
-                <a href="index.html" class="text-white hoverEffect  ">Home</a>
-                <a href="about-us.html" class="text-white hoverEffect">About Us</a>
-                <a href="contact.html" class="text-white hoverEffect">Contact Us</a>
+                <a data-i18n="common.footer.home" href="index.html" class="eachNavLink  text-white">Home</a>
+                <a data-i18n="common.footer.about" href="about-us.html" class="eachNavLink  text-white">About Us</a>
+                <a data-i18n="common.footer.contact" href="contact.html" class="eachNavLink  text-white">Contact Us</a>
             </div>
             <!-- Copyright -->
 
         </div>
-        <div class="text-xs text-white pt-3 text-center">
-            © 2025 Lucky 1. All rights reserved.
+        <div data-i18n="common.footer.copyright" class="text-xs text-white pt-3 text-center">
+            © 2025 Lucky1. All rights reserved.
         </div>
     </footer>
 

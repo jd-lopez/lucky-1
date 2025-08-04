@@ -5,41 +5,43 @@ const hamburgerContainer = document.getElementById("hamburgerContainer");
 const burgerIcon = document.getElementById("burgerIcon");
 const closeIcon = document.getElementById("closeIcon");
 
-window.addEventListener("scroll", () => {
-  const heroHeight = hero.offsetHeight;
-  const headerHeight = myHeader.offsetHeight;
-  const scrollY = window.scrollY;
+if (hero) {
+  window.addEventListener("scroll", () => {
+    const heroHeight = hero.offsetHeight;
+    const headerHeight = myHeader.offsetHeight;
+    const scrollY = window.scrollY;
 
-  if (scrollY > heroHeight - headerHeight) {
-    myNav.classList.remove("lg:text-white");
-    myNav.classList.add("lg:text-black");
-    myHeader.classList.add(
-      "border-b-2",
-      "border-b-blue-500",
-      "shadow-md",
-      "bg-white/99"
-    );
-    burgerIcon.classList.remove("text-white");
-    burgerIcon.classList.add("text-black");
-    closeIcon.classList.remove("text-white");
-    closeIcon.classList.add("text-black");
-  } else {
-    myNav.classList.add("lg:text-white");
-    myNav.classList.remove("lg:text-black");
-    myHeader.classList.remove(
-      "border-b-2",
-      "border-b-blue-500",
-      "shadow-md",
-      "bg-white/99"
-    );
-    burgerIcon.classList.remove("text-black");
-    burgerIcon.classList.add("text-white");
-    closeIcon.classList.remove("text-black");
-    closeIcon.classList.add("text-white");
-  }
-});
+    if (scrollY > heroHeight - headerHeight) {
+      myNav.classList.remove("lg:text-white");
+      myNav.classList.add("lg:text-black");
+      myHeader.classList.add(
+        "border-b-2",
+        "border-b-blue-500",
+        "shadow-md",
+        "bg-white/99"
+      );
+      burgerIcon.classList.remove("text-white");
+      burgerIcon.classList.add("text-black");
+      closeIcon.classList.remove("text-white");
+      closeIcon.classList.add("text-black");
+    } else {
+      myNav.classList.add("lg:text-white");
+      myNav.classList.remove("lg:text-black");
+      myHeader.classList.remove(
+        "border-b-2",
+        "border-b-blue-500",
+        "shadow-md",
+        "bg-white/99"
+      );
+      burgerIcon.classList.remove("text-black");
+      burgerIcon.classList.add("text-white");
+      closeIcon.classList.remove("text-black");
+      closeIcon.classList.add("text-white");
+    }
+  });
 
-window.dispatchEvent(new Event("scroll"));
+  window.dispatchEvent(new Event("scroll"));
+}
 
 const overlay = document.getElementById("overlay");
 
@@ -48,7 +50,7 @@ hamburgerContainer.addEventListener("click", (e) => {
     burgerIcon.classList.add("hidden");
     closeIcon.classList.remove("hidden");
     myNav.classList.add(
-      "-translate-x-42",
+      "-translate-x-52",
       "transform-all",
       "duration-200",
       "delay-75"
@@ -67,7 +69,7 @@ overlay.addEventListener("click", () => {
 function hideMenu() {
   burgerIcon.classList.remove("hidden");
   closeIcon.classList.add("hidden");
-  myNav.classList.remove("-translate-x-42");
+  myNav.classList.remove("-translate-x-52");
   overlay.classList.add("hidden");
 }
 
@@ -88,15 +90,17 @@ openModal.forEach((modalBtn) => {
   });
 });
 
-closeModal.addEventListener("click", () => {
-  modal.close();
-  modal.classList.remove("flex");
-});
+if (modal) {
+  closeModal.addEventListener("click", () => {
+    modal.close();
+    modal.classList.remove("flex");
+  });
+}
 
 //verticall scroll for How it works section
 
 const howCards = document.querySelectorAll(".vert-scroll-animate");
-const howParent = document.querySelector(".howParent");
+const howParent = document.querySelectorAll(".howParent");
 
 if (howParent && howCards.length) {
   const howObserver = new IntersectionObserver(
@@ -106,7 +110,7 @@ if (howParent && howCards.length) {
           howCards.forEach((card, index) => {
             setTimeout(() => {
               card.classList.add("visible");
-            }, index * 500);
+            }, index * 300);
           });
         } else {
           howCards.forEach((card) => {
@@ -118,7 +122,11 @@ if (howParent && howCards.length) {
     { threshold: 0.1 }
   );
 
-  howObserver.observe(howParent);
+  howParent.forEach((parent) => {
+    howObserver.observe(parent);
+  });
+
+  // howObserver.observe(howParent);
 }
 
 //scroll animation
@@ -146,18 +154,24 @@ items.forEach((element) => {
 
 const selectLanguage = document.getElementById("lang-select");
 
-const heroText = {
-  en: {
-    translation: {
-      hero: "Nationwide Transport Brokerage You Can Trust",
-    },
-  },
-  es: {
-    translation: {
-      hero: "Una agencia de transporte a nivel nacional en la que puede confiar",
-    },
-  },
-};
+fetch("js/translation.json")
+  .then((response) => response.json())
+  .then((response) => {
+    console.log(response);
+
+    i18next.init(
+      {
+        lng: localStorage.getItem("lang") || "en",
+        debug: false,
+        resources: response,
+      },
+      function (err, t) {
+        updateContent();
+      }
+    );
+
+    console.log(i18next.t("index.hero.heading"));
+  });
 
 const savedLang = localStorage.getItem("lang") || "en";
 selectLanguage.value = savedLang; // ✅ sets the correct option
@@ -174,22 +188,27 @@ if (activeFlag === "us") {
   document.getElementById("usFlag").classList.remove("fi");
 }
 
-i18next.init(
-  {
-    lng: localStorage.getItem("lang") || "en",
-    debug: false,
-    resources: heroText,
-  },
-  function (err, t) {
-    updateContent();
-  }
-);
+// i18next.init(
+//   {
+//     lng: localStorage.getItem("lang") || "en",
+//     debug: false,
+//     resources: heroText,
+//   },
+//   function (err, t) {
+//     updateContent();
+//   }
+// );
 
 function updateContent() {
   document.querySelectorAll("[data-i18n]").forEach((element) => {
     const key = element.getAttribute("data-i18n");
 
     element.innerHTML = i18next.t(key);
+  });
+
+  document.querySelectorAll("[data-i18n-placeholder]").forEach((element) => {
+    const key = element.getAttribute("data-i18n-placeholder");
+    element.placeholder = i18next.t(key);
   });
 }
 

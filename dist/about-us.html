@@ -10,28 +10,30 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css" />
-
+    <script src="https://unpkg.com/i18next@23.0.1/i18next.min.js" defer></script>
     <script src="js/script.js" defer></script>
+
+
 
 </head>
 
 <body class="relative font-roboto text-base h-dvh overflow-x-hidden">
-    <header id="myHeader" class="px-5 py-2 shadow-xl bg-white/0 backdrop-blur-md fixed top-0 left-0  w-full z-70 
-    md:px-15 md:shadow-xl">
+    <header id="myHeader" class="px-5 py-2 shadow-xl bg-white  fixed top-0 w-full z-70 
+        md:px-15 md:shadow-xl border-b-2 border-b-cyan-600">
         <div class="flex justify-between items-center">
             <div class="size-20 flex flex-col items-center
-                        md:size-25">
+                            md:size-25">
                 <img class="" src="images/Logo_lucky.png" alt="">
 
             </div>
 
             <div id="hamburgerContainer" class="lg:hidden size-10">
-                <svg id="burgerIcon" class="size-10 text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
+                <svg id="burgerIcon" class="size-10 text-black" xmlns="http://www.w3.org/2000/svg" fill="none"
                     viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round"
                         d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                 </svg>
-                <svg id="closeIcon" class="hidden size-10 text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
+                <svg id="closeIcon" class="hidden size-10 text-black" xmlns="http://www.w3.org/2000/svg" fill="none"
                     viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
                 </svg>
@@ -41,19 +43,19 @@
 
 
             <nav id="myNav" class="text-black
-                    flex flex-col items-center absolute shadow-xl bg-white backdrop-blur-2xl top-24 -right-42 pb-4 
+                    flex flex-col items-center absolute  shadow-xl bg-white backdrop-blur-2xl top-24 -right-52 pb-4 pr-8 
                     md:top-29
-                    lg:flex lg:flex-row lg:justify-between lg:px-3 lg:text-sm font-bold lg:static lg:bg-inherit lg:backdrop-blur-none lg:shadow-none lg:translate-x-0 lg:text-white
+                    lg:flex lg:flex-row lg:justify-between lg:px-3 lg:text-sm font-bold lg:static lg:bg-inherit lg:backdrop-blur-none lg:shadow-none lg:translate-x-0 
                     lg:transition-all lg:duration-150 lg:delay-100 gap-4
                     group
                     ">
-                <a href="index.html" class="eachNavLink hoverEffect text-inherit ">Home</a>
-                <a href="about-us.html" class="eachNavLink hoverEffect text-inherit">About Us</a>
-                <a href="contact.html" class="eachNavLink hoverEffect text-inherit">Contact Us</a>
+                <a data-i18n="common.nav.home" href="index.html" class="eachNavLink hoverEffect text-inherit ">Home</a>
+                <a data-i18n="common.nav.about" href="about-us.html" class="eachNavLink hoverEffect text-inherit">About
+                    Us</a>
+                <a data-i18n="common.nav.contact" href="contact.html"
+                    class="eachNavLink hoverEffect text-inherit">Contact Us</a>
 
-
-
-                <div id="flag-container" class="flex items-center gap-2 px-2">
+                <div id="flag-container" class="flex items-center gap-2 px-2 text-black">
 
                     <div class="">
                         <span id="usFlag" class="fi fi-us"></span>
@@ -61,11 +63,14 @@
                     </div>
                     <select name="lang" id="lang-select" class="outline-0 open:bg-blue-400">
                         <option value="en" selected>English</option>
-                        <option value="es">Spanish</option>
+                        <option value="es">Español</option>
                     </select>
                 </div>
+
             </nav>
         </div>
+
+
     </header>
 
 
@@ -74,66 +79,165 @@
     lg:hidden "></div>
 
 
-    <div id="hero" class="relative w-full">
-        <div class="w-full h-90  lg:h-120 ">
 
-            <img src="images/car-carrier-trailer.jpg" class="object-cover w-full h-full md:h-full" alt="">
-        </div>
-
-
-
-        <div class="inset-0 absolute bg-black/20 z-10"></div>
-        <div class="max-w-7xl mx-auto text-sm absolute top-20 left-0 right-0 p-4 text-white flex flex-col justify-between gap-14 items-center z-20
-            md:top-25 md:px-50 md:gap-20">
-            <h1 class="font-bold text-xl 
-            md:text-3xl">"Nationwide Transport Brokerage You Can Trust"
-
-            </h1>
-            <p class="text-sm text-gray-50 hidden
-            md:text-sm md:block 
-            lg:text-lg">We connect shippers with fully insured, reliable carriers to move motorcycles, ATVs,
-                UTVs, RVs, and heavy equipment
-                across the U.S.</p>
-            <div class="flex justify-between gap-8">
-                <button class="button"><a href="mailto:lucky1trans@gmail.com">Email Us</a></button>
-                <button class="button open-button">Call Us</button>
-            </div>
-
-            <dialog class="modal shadow-md open:backdrop:bg-gradient-to-r open:backdrop:from-blue-400/20 open:backdrop:to-red-200/20  flex-col items-center justify-between rounded-md top-20 left-10 p-2 gap-4 z-100 bg-blue-50 w-80 h-60
-                lg:w-160 lg:left-80">
-                <div class="flex flex-col gap-4 items-center">
-                    <h2 class="self-center text-lg">Talk to us in English or Spanish</h2>
-
-                    <div class="">
-                        <a class="button" href="tel:786-457-1448"><i class="fa-solid fa-phone mr-2"></i>English</a>
-
-                        <a class="button" href="tel:305-720-0710"><i class="fa-solid fa-phone mr-2"></i>Español</a>
-
-                    </div>
-                </div>
-                <button class="closeModal bg-blue-700 text-white font-bold self-end p-1 rounded-md">Close</button>
-            </dialog>
-
-        </div>
-    </div>
 
     <div class="h-1 bg-gradient-to-r from-indigo-600 via-red-600 to-lime-500"></div>
 
 
-    <main class="font-roboto text-base
-    
-    bg-radial from-blue-100 via-purple-100/90 overflow-x-hidden">
+    <main class="font-roboto text-base mt-12
+    overflow-hidden">
+        <section class="sectionChildren bg-[url(../images/bottom_blue.svg)] bg-cover bg-center ">
+            <h1 data-i18n="about.pageTitle" class="text-2xl font-bold self-center">About Us</h1>
+            <hr class="h-1 w-38 self-center bg-gradient-to-r from-indigo-500 via-blue-400 to-lime-300">
+            <p data-i18n="about.intro" class="text-center">
+                At <strong>MyLucky1</strong>, we connect people, cargo, and carriers—delivering reliable transportation
+                solutions
+                tailored to
+                your needs. As a licensed and bonded freight broker, we specialize in streamlining the logistics process
+                between
+                shippers and carriers, ensuring that every load is handled with precision, care, and professionalism.
+            </p>
 
+            <div class="flex flex-col gap-4 lg:gap-7 justify-between
+            lg:flex-row">
+                <div class="card gap-4">
+                    <h1 data-i18n="about.whoWeAre.heading" class="self-center text-lg font-bold">Who We Are</h1>
+                    <p data-i18n="about.whoWeAre.description" class="flex-1">We’re not just intermediaries—we’re
+                        logistics partners. With years of experience
+                        in the
+                        transportation
+                        industry, our
+                        team understands the challenges of shipping, scheduling, and communication. Whether you’re
+                        moving a
+                        single
+                        unit or
+                        managing complex freight operations, we bring efficiency, transparency, and consistency to every
+                        step of
+                        the
+                        process.</p>
+                </div>
+
+
+                <div class="card gap-4">
+                    <h1 data-i18n="about.mission.heading" class=" self-center text-lg font-bold">Our Mission</h1>
+                    <p data-i18n="about.mission.description" class="flex-1">To simplify freight transport for shippers
+                        and carriers by delivering responsive
+                        service, clear
+                        communication, and
+                        dependable logistics management. We treat every load like it matters—because to you, it does.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="sectionChildren bg-gray-50">
+            <div class="flex flex-col gap-1">
+                <h1 data-i18n="about.ourValues.heading" class="text-2xl font-bold self-center">Our Values
+                </h1>
+                <hr class="h-1 w-38 mt-2 self-center bg-gradient-to-r from-indigo-500 via-blue-400 to-lime-300">
+                <p data-i18n="about.ourValues.intro" class="self-center my-8">At the heart of our operations are the
+                    values that drive everything we do:
+                </p>
+                <div class="flex flex-col gap-6 justify-center flex-wrap mt-4 howParent
+                lg:flex-row">
+                    <div class="valueCard vert-scroll-animate">
+                        <h1 data-i18n="about.ourValues.eachValue.integrity.title" class="self-center text-lg font-bold">
+                            Integrity
+                        </h1>
+                        <p data-i18n="about.ourValues.eachValue.integrity.description">We build trust through honest
+                            communication, fair practices, and transparent
+                            operations—always putting our clients’
+                            interests first.
+                        </p>
+                    </div>
+                    <div class="valueCard vert-scroll-animate">
+                        <h1 data-i18n="about.ourValues.eachValue.reliability.title"
+                            class="self-center text-lg font-bold">Reliability</h1>
+                        <p data-i18n="about.ourValues.eachValue.reliability.description">We do what we say, and we do it
+                            on time. You can count on us to deliver consistent results
+                            and dependable service from
+                            start to finish.
+                        </p>
+                    </div>
+                    <div class="valueCard vert-scroll-animate grow-0">
+                        <h1 data-i18n="about.ourValues.eachValue.partnership.title"
+                            class="self-center text-lg font-bold">Partnership</h1>
+                        <p data-i18n="about.ourValues.eachValue.partnership.description">We believe in building
+                            long-term relationships, not one-time transactions. Whether you're a
+                            shipper or a carrier, we
+                            treat you as part of our team.
+                        </p>
+                    </div>
+                    <div class="valueCard vert-scroll-animate grow-0 ">
+                        <h1 data-i18n="about.ourValues.eachValue.excellence.title"
+                            class="self-center text-lg font-bold">Excellence</h1>
+                        <p data-i18n="about.ourValues.eachValue.excellence.description">We pursue high standards in
+                            every interaction—offering proactive communication, efficient
+                            coordination, and continuous
+                            improvement.
+                        </p>
+                    </div>
+                    <div class="valueCard vert-scroll-animate mx-auto">
+                        <h1 data-i18n="about.ourValues.eachValue.accountability.title"
+                            class="self-center text-lg font-bold">Accountability</h1>
+                        <p data-i18n="about.ourValues.eachValue.accountability.description">We take full ownership of
+                            our commitments. If challenges arise, we solve them—quickly,
+                            respectfully, and professionally.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="sectionChildren bg-[url(../images/fromTop.svg)] bg-no-repeat bg-cover lg:bg-bottom-left bg-top">
+            <div class="flex flex-col gap-8 items-center">
+                <h1 data-i18n="about.moveForward.heading" class="self-center text-2xl font-bold">Let’s Move Forward</h1>
+                <p data-i18n="about.moveForward.description" class="text-justify px-16 lg:px-44">
+
+                    Whether you're shipping a motorcycle across the country, relocating heavy equipment, or managing a
+                    fleet of deliveries,
+                    we’re here to make it easier. Trust <strong>Lucky1</strong> to be the reliable link in your supply
+                    chain.
+                </p>
+
+                <div class="flex justify-center gap-8">
+                    <a data-i18n="about.moveForward.contact" href="/dist/contact.html" class="button">Contact Us</a>
+                    <button data-i18n="about.moveForward.call" class="button open-button lg:hidden">Call Us</button>
+                </div>
+            </div>
+
+            <dialog class="modal shadow-md open:backdrop:bg-gradient-to-r open:backdrop:from-blue-400/20 open:backdrop:to-red-200/20  flex-col items-center justify-between rounded-md top-1/2 left-1/2 p-2 -translate-1/2 gap-4 z-100 bg-white w-fit h-fit
+                            ">
+                <div class="flex flex-col gap-4 items-center">
+                    <h2 data-i18n="about.moveForward.modalTitle" class="self-center text-lg">Talk to us in English or
+                        Spanish
+                    </h2>
+
+                    <div class="">
+                        <a data-i18n="about.moveForward.modalEnglish" class="button" href="tel:786-457-1448"><i
+                                class="fa-solid fa-phone mr-2"></i>English</a>
+
+                        <a class="button" href="tel:305-720-0710"><i class="fa-solid fa-phone mr-2"></i>Spanish</a>
+
+                    </div>
+                </div>
+                <button data-i18n="about.moveForward.modalClose"
+                    class="closeModal bg-blue-700 text-white font-bold self-end p-1 rounded-md">Close</button>
+            </dialog>
+        </section>
     </main>
+
 
 
     <div class="h-1 bg-gradient-to-r from-indigo-600 via-red-600 to-lime-500"></div>
     <footer class="w-full bg-radial from-indigo-900 to-indigo-950 shadow-2xl">
         <div class="p-8 flex flex-col justify-between items-center gap-4 
-        lg:flex-row lg:justify-center lg:gap-60">
+            lg:flex-row lg:justify-center lg:gap-60">
             <div class="flex flex-col items-center gap-3">
                 <div class="size-20 flex flex-col items-center
-                                        md:size-25">
+                                            md:size-25">
                     <img src="images/Logo_lucky.png" alt="">
 
                 </div>
@@ -148,15 +252,15 @@
 
 
             <div class="flex flex-col items-center gap-2">
-                <a href="index.html" class="eachNavLink hoverEffect text-inherit ">Home</a>
-                <a href="about-us.html" class="eachNavLink hoverEffect text-inherit">About Us</a>
-                <a href="contact.html" class="eachNavLink hoverEffect text-inherit">Contact Us</a>
+                <a data-i18n="common.footer.home" href="index.html" class="eachNavLink  text-white">Home</a>
+                <a data-i18n="common.footer.about" href="about-us.html" class="eachNavLink  text-white">About Us</a>
+                <a data-i18n="common.footer.contact" href="contact.html" class="eachNavLink  text-white">Contact Us</a>
             </div>
             <!-- Copyright -->
 
         </div>
-        <div class="text-xs text-white pt-3 text-center">
-            © 2025 Lucky 1. All rights reserved.
+        <div data-i18n="common.footer.copyright" class="text-xs text-white pt-3 text-center">
+            © 2025 Lucky1. All rights reserved.
         </div>
     </footer>
 

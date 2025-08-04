@@ -18,16 +18,22 @@
 }
 
 .sectionChildren {
-  @apply flex flex-col gap-5 px-6 lg:px-20 py-24 text-sm lg:text-lg;
+  @apply flex flex-col gap-5 px-6 lg:px-20 pt-16 pb-18 lg:py-20;
 }
 
 .eachStep {
   @apply lg:flex lg:flex-col;
 }
 .card {
-  @apply flex flex-col items-start font-roboto text-base p-3 mt-14 rounded-md flex-1 min-w-[200px] lg:h-60;
+  @apply flex flex-col items-stretch  p-4 gap-2 rounded-md flex-1 min-w-[200px] lg:h-54 text-justify;
 
-  box-shadow: 0 0 2px 5px hsla(0, 0%, 0%, 0.053);
+  box-shadow: 0 0 10px 6px hsla(0, 0%, 0%, 0.053);
+}
+
+.valueCard {
+  @apply flex flex-col items-stretch p-6 gap-2 rounded-md flex-1 min-w-[200px] lg:min-h-fit bg-white text-justify lg:text-left;
+
+  box-shadow: 0 0 10px 6px hsla(0, 0%, 0%, 0.053);
 }
 
 .serveCard {

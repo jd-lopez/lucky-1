@@ -1,0 +1,324 @@
+{
+  "en": {
+    "translation": {
+      "common": {
+        "nav": {
+          "home": "Home",
+          "about": "About Us",
+          "contact": "Contact Us"
+        },
+        "footer": {
+          "home": "Home",
+          "about": "About Us",
+          "contact": "Contact Us",
+          "copyright": "© 2025 Lucky1. All rights reserved."
+        }
+      },
+
+      "index": {
+        "hero": {
+          "heading": "Nationwide Transport Brokerage You Can Trust",
+          "description": "We connect shippers with fully insured, reliable carriers to move motorcycles, ATVs, UTVs, RVs, and heavy equipment across the U.S.",
+          "contact": "Contact US",
+          "call": "Call Us"
+        },
+
+        "whoWeAre": {
+          "title": "Who We Are",
+          "description": "We are a transport brokerage company dedicated to simplifying vehicle shipping. Whether you're a dealer, auction buyer, or private owner, we coordinate with top-rated carriers to deliver your vehicle safely and affordably.",
+          "features": {
+            "licensed": "licensed and insured broker",
+            "network": "Access to nationwide carrier network",
+            "options": "Open and enclosed transport options",
+            "peace": "We handle logistics — you get peace of mind"
+          }
+        },
+
+        "howItWorks": {
+          "heading": "How It Works",
+          "description": "Our streamline process ensures your freight is handled efficiently and effectively every step of the way.",
+
+          "howSteps": {
+            "quota": {
+              "title": "Request a quote",
+              "description": "Reach out with your shipping requirement including origin, destination and freight details."
+            },
+            "match": {
+              "title": "Match with a carrier",
+              "description": "Select the best carrier from our network based on your needs."
+            },
+            "tracking": {
+              "title": "Track shipment",
+              "description": "Track your shipment in real time through our online portal from pickup to delivery."
+            },
+            "delivery": {
+              "title": "Delivery confirmation",
+              "description": "Get timely delivery confirmation and paperwork."
+            }
+          }
+        },
+        "whoWeServe": {
+          "heading": "Who We Serve",
+          "enclosed": {
+            "title": "Enclosed Freight",
+            "description": "Our enclosed transport options protect sensitive or high-value freight from weather and road debris during transit."
+          },
+          "oversize": {
+            "title": "Oversize Load",
+            "description": "We handle oversized and heavy equipment shipments, including construction machinery and industrial vehicles, with specialized carriers."
+          },
+          "recreational": {
+            "title": "Recreational Vehicle",
+            "description": "We move motorcycles, ATVs, UTVs, RVs, and other recreational vehicles with care, offering both open and enclosed transport options."
+          }
+        },
+        "whyChooseUs": {
+          "heading": "Why Choose Us",
+          "list": {
+            "guesswork": "<strong>No Guesswork</strong>: We manage the entire shipping process.",
+            "trusted": "<strong>Trusted Network</strong>: Vetted and insured carriers only.",
+            "pricing": "<strong>Transparent Pricing</strong>: No surprise fees.",
+            "support": "<strong>Responsive Support</strong>: We’re with you start to finish."
+          },
+          "email": "Email Us",
+          "call": "Call Us"
+        }
+      },
+      "about": {
+        "pageTitle": "About Us",
+        "intro": "At <strong>MyLucky1</strong>, we connect people, cargo, and carriers—delivering reliable transportation solutions tailored to your needs. As a licensed and bonded freight broker, we specialize in streamlining the logistics process between shippers and carriers, ensuring that every load is handled with precision, care, and professionalism.",
+        "whoWeAre": {
+          "heading": "Who We Are",
+          "description": "We’re not just intermediaries—we’re logistics partners. With years of experience in the transportation industry, our team understands the challenges of shipping, scheduling, and communication. Whether you’re moving a single unit or managing complex freight operations, we bring efficiency, transparency, and consistency to every step of the process."
+        },
+        "mission": {
+          "heading": "Our Mission",
+          "description": "To simplify freight transport for shippers and carriers by delivering responsive service, clear communication, and dependable logistics management. We treat every load like it matters—because to you, it does."
+        },
+        "ourValues": {
+          "heading": "Our Values",
+          "intro": "At the heart of our operations are the values that drive everything we do:",
+          "eachValue": {
+            "integrity": {
+              "title": "Integrity",
+              "description": "We build trust through honest communication, fair practices, and transparent operations—always putting our clients’ interests first."
+            },
+            "reliability": {
+              "title": "Reliability",
+              "description": "We do what we say, and we do it on time. You can count on us to deliver consistent results and dependable service from start to finish."
+            },
+            "partnership": {
+              "title": "Partnership",
+              "description": "We believe in building long-term relationships, not one-time transactions. Whether you're a shipper or a carrier, we treat you as part of our team."
+            },
+            "excellence": {
+              "title": "Excellence",
+              "description": "We pursue high standards in every interaction—offering proactive communication, efficient coordination, and continuous improvement."
+            },
+            "accountability": {
+              "title": "Accountability",
+              "description": "We take full ownership of our commitments. If challenges arise, we solve them—quickly, respectfully, and professionally."
+            }
+          }
+        },
+        "moveForward": {
+          "heading": "Let’s Move Forward",
+          "description": "Whether you're shipping a motorcycle across the country, relocating heavy equipment, or managing a fleet of deliveries, we’re here to make it easier. Trust <strong>Lucky1</strong> to be the reliable link in your supply chain.",
+          "contact": "Contact Us",
+          "call": "Call Us",
+          "modalTitle": "Talk to us in English or Spanish",
+          "modalEnglish": "<i class='fa-solid fa-phone mr-2'></i> English",
+          "modalSpanish": "Spanish",
+          "modalClose": "Close"
+        }
+      },
+      "contact": {
+        "heading": "Contact us and get a quote for free.",
+        "description": "We're here to help. Reach out to us with any questions or inquiries. Fill out the following form to get a quote. We will reach out to you.",
+        "form": {
+          "name": "Name",
+          "email": "Email",
+          "phone": "Phone",
+          "vehicle": "Vehicle Type",
+          "pickup": "Pickup location",
+          "delivery": "Delivery location",
+          "transport": "Preferred Transport type",
+          "language": "Preferred Language",
+          "comments": "Comments (optional)",
+          "commentsPlaceholder": "Additional comments",
+          "submit": "Submit",
+          "clear": "Clear Form",
+          "directEmail": "Prefer to email us directly? <a class='text-blue-600 visited:text-red-800' href='mailto:lucky1trans@gmail.com'>Click here</a>"
+        },
+        "info": {
+          "heading": "Our Contact information",
+          "phone": "<i class='fa-solid fa-phone mr-4'></i>  <strong>Phone</strong>: English 786-457-1448 / Español 305-720-0710",
+          "email": "<i class='fa-solid fa-envelope mr-4'></i> <strong>Email</strong>: lucky1trans@gmail.com",
+          "address": "<i class='fa-solid fa-location-dot mr-4'></i> <strong>Address</strong>: 20280 SW 190TH ST MIAMI, FL 33187"
+        }
+      }
+    }
+  },
+
+  "es": {
+    "translation": {
+      "common": {
+        "nav": {
+          "home": "Inicio",
+          "about": "Nosotros",
+          "contact": "Contactanos"
+        },
+        "footer": {
+          "home": "Inicio",
+          "about": "Nosotros",
+          "contact": "Contactanos",
+          "copyright": "© 2025 Lucky1. Todos los derechos reservados."
+        }
+      },
+
+      "index": {
+        "hero": {
+          "heading": "Corretaje de transporte a nivel nacional en el que puede confiar",
+          "description": "Conectamos a los transportistas con transportistas confiables y totalmente asegurados para trasladar motocicletas, vehículos todo terreno, UTV, vehículos recreativos y equipos pesados en todo Estados Unidos.",
+          "contact": "Contactanos",
+          "call": "Llamanos"
+        },
+
+        "whoWeAre": {
+          "title": "Quienes Somos",
+          "description": "Somos una empresa de transporte dedicada a simplificar el envío de vehículos. Ya sea concesionario, comprador en subasta o particular, nos coordinamos con transportistas de primera categoría para entregar su vehículo de forma segura y económica.",
+
+          "features": {
+            "licensed": "Corredor autorizado y asegurado",
+            "network": "Acceso a una red nacional de transportistas",
+            "options": "Opciones de transporte abierto y cerrado",
+            "peace": "Nos encargamos de la logística — usted obtiene tranquilidad"
+          }
+        },
+        "howItWorks": {
+          "heading": "Como functiona",
+          "description": "Nuestro proceso optimizado garantiza que su carga se maneje de manera eficiente y eficaz en cada paso del camino.",
+          "howSteps": {
+            "quota": {
+              "title": "Solicitar una cotización",
+              "description": "Contáctenos con su requerimiento de envío, incluyendo origen, destino y detalles de la carga."
+            },
+            "match": {
+              "title": "Emparejar con un transportista",
+              "description": "Seleccione el mejor transportista de nuestra red según sus necesidades."
+            },
+            "tracking": {
+              "title": "Rastrear envío",
+              "description": "Rastree su envío en tiempo real a través de nuestro portal en línea desde la recogida hasta la entrega."
+            },
+            "delivery": {
+              "title": "Confirmación de entrega",
+              "description": "Reciba confirmación de entrega y documentación a tiempo."
+            }
+          }
+        },
+        "whoWeServe": {
+          "heading": "A Quién Servimos",
+          "enclosed": {
+            "title": "Carga Cerrada",
+            "description": "Nuestras opciones de transporte cerrado protegen la carga sensible o de alto valor del clima y los escombros de la carretera durante el tránsito."
+          },
+          "oversize": {
+            "title": "Carga Pesada",
+            "description": "Manejamos envíos de equipos pesados y sobredimensionados, incluyendo maquinaria de construcción y vehículos industriales, con transportistas especializados."
+          },
+          "recreational": {
+            "title": "Vehículo Recreativo",
+            "description": "Movemos motocicletas, ATVs, UTVs, RVs y otros vehículos recreativos con cuidado, ofreciendo opciones de transporte abierto y cerrado."
+          }
+        },
+        "whyChooseUs": {
+          "heading": "Por Qué Elegirnos",
+          "list": {
+            "guesswork": "<strong>Sin conjeturas</strong>: Gestionamos todo el proceso de envío.",
+            "trusted": "<strong>Red de confianza</strong>: Solo transportistas verificados y asegurados.",
+            "pricing": "<strong>Precios Transparentes</strong>: Sin tarifas sorpresa.",
+            "support": "<strong>Sorporte todo el tiempo</strong>: Estamos con usted de principio a fin."
+          },
+          "email": "Envíanos un correo",
+          "call": "Llámanos"
+        }
+      },
+      "about": {
+        "pageTitle": "Nosotros",
+        "intro": "En <strong>MyLucky1</strong>, conectamos personas, carga y transportistas, brindando soluciones de transporte confiables adaptadas a sus necesidades. Como corredor de carga autorizado y asegurado, nos especializamos en optimizar el proceso logístico entre remitentes y transportistas, asegurando que cada envío se maneje con precisión, cuidado y profesionalismo.",
+        "whoWeAre": {
+          "heading": "Quiénes Somos",
+          "description": "No somos solo intermediarios, somos socios logísticos. Con años de experiencia en la industria del transporte, nuestro equipo comprende los desafíos del envío, la programación y la comunicación. Ya sea que traslade una sola unidad o gestione operaciones de carga complejas, aportamos eficiencia, transparencia y consistencia en cada paso del proceso."
+        },
+        "mission": {
+          "heading": "Nuestra Misión",
+          "description": "Simplificar el transporte de carga para remitentes y transportistas brindando un servicio receptivo, comunicación clara y gestión logística confiable. Tratamos cada envío como si importara, porque para usted, lo hace."
+        },
+        "ourValues": {
+          "heading": "Nuestros Valores",
+          "intro": "En el corazón de nuestras operaciones están los valores que impulsan todo lo que hacemos:",
+          "eachValue": {
+            "integrity": {
+              "title": "Integridad",
+              "description": "Construimos confianza a través de una comunicación honesta, prácticas justas y operaciones transparentes, siempre poniendo los intereses de nuestros clientes en primer lugar."
+            },
+            "reliability": {
+              "title": "Confiabilidad",
+              "description": "Cumplimos lo que decimos y lo hacemos a tiempo. Puede contar con nosotros para ofrecer resultados consistentes y un servicio confiable de principio a fin."
+            },
+            "partnership": {
+              "title": "Colaboración",
+              "description": "Creemos en construir relaciones a largo plazo, no transacciones únicas. Ya sea que sea un remitente o un transportista, lo tratamos como parte de nuestro equipo."
+            },
+            "excellence": {
+              "title": "Excelencia",
+              "description": "Perseguimos altos estándares en cada interacción, ofreciendo comunicación proactiva, coordinación eficiente y mejora continua."
+            },
+            "accountability": {
+              "title": "Responsabilidad",
+              "description": "Asumimos plenamente nuestros compromisos. Si surgen desafíos, los resolvemos de manera rápida, respetuosa y profesional."
+            }
+          }
+        },
+
+        "moveForward": {
+          "heading": "Sigamos Adelante",
+          "description": "Ya sea que esté enviando una motocicleta a través del país, reubicando equipos pesados o gestionando una flota de entregas, estamos aquí para facilitarle el proceso. Confíe en <strong>Lucky1</strong> como el vínculo confiable en su cadena de suministro.",
+          "contact": "Contáctanos",
+          "call": "Llámanos",
+          "modalTitle": "Hable con nosotros en inglés o español",
+          "modalEnglish": "<i class='fa-solid fa-phone mr-2'></i> Inglés",
+          "modalSpanish": "<i class='fa-solid fa-phone mr-2'></i> Español",
+          "modalClose": "Cerrar"
+        }
+      },
+
+      "contact": {
+        "heading": "Contáctanos y obtén una cotización gratis.",
+        "description": "Estamos aquí para ayudarte. Contáctanos con cualquier pregunta o consulta. Completa el siguiente formulario para obtener una cotización. Nos pondremos en contacto contigo.",
+        "form": {
+          "name": "Nombre",
+          "email": "Correo electrónico",
+          "phone": "Teléfono",
+          "vehicle": "Tipo de vehículo",
+          "pickup": "Lugar de recogida",
+          "delivery": "Lugar de entrega",
+          "transport": "Tipo de transporte preferido",
+          "language": "Idioma preferido",
+          "comments": "Comentarios (opcional)",
+          "commentsPlaceholder": "Comentarios adicionales",
+          "submit": "Enviar",
+          "clear": "Limpiar formulario",
+          "directEmail": "Prefieres escribirnos directamente? <a class='text-blue-600 visited:text-red-800' href='mailto:lucky1trans@gmail.com'>Click aqui</a>"
+        },
+        "info": {
+          "heading": "Nuestra información de contacto",
+          "phone": "<i class='fa-solid fa-phone mr-4'></i> <strong>Teléfono</strong>: Inglés 786-457-1448 / Español 305-720-0710",
+          "email": "<i class='fa-solid fa-envelope mr-4'></i> <strong>Email</strong>: lucky1trans@gmail.com",
+          "address": "<i class='fa-solid fa-location-dot mr-4'></i> <strong>Direccion</strong>: 20280 SW 190TH ST MIAMI, FL 33187"
+        }
+      }
+    }
+  }
+}
