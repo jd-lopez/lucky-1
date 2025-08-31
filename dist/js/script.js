@@ -105,14 +105,13 @@ if (modal) {
 window.addEventListener("popstate", (event) => {
   if (event.state && event.state.modalOpen) {
     // Modal is open, so close it
-    closeModal.addEventListener("click", () => {
-      modal.close();
-      modal.classList.remove("flex");
 
-      if (history.state && history.state.modalOpen) {
-        history.back();
-      }
-    });
+    modal.close();
+    modal.classList.remove("flex");
+
+    if (history.state && history.state.modalOpen) {
+      history.back();
+    }
   }
 });
 
