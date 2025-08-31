@@ -17,9 +17,10 @@
 
 </head>
 
-<body class="relative font-roboto text-base h-dvh overflow-x-hidden">
-    <header id="myHeader" class="px-5 py-2 shadow-xl bg-white/0 backdrop-blur-md fixed top-0 left-0  w-full z-70 
-    md:px-15 md:shadow-xl">
+<body class="relative font-roboto text-base h-dvh overflow-x-hidden transition-colors duration-300">
+    <header id="myHeader"
+        class="px-5 py-2 shadow-xl bg-white/0 backdrop-blur-md fixed top-0 left-0  w-full z-70 
+    md:px-15 md:shadow-xl dark:bg-black/95 dark:text-white dark:border-b dark:border-blue-600 transition-colors duration-300">
         <div class="flex justify-between items-center">
             <div class="size-20 flex flex-col items-center
             md:size-25">
@@ -49,6 +50,9 @@
             lg:flex lg:flex-row lg:justify-between lg:px-3 lg:text-sm font-bold lg:static lg:bg-inherit lg:backdrop-blur-none lg:shadow-none lg:translate-x-0 lg:text-white
             lg:transition-all lg:duration-150 lg:delay-100 lg:pb-0
             group
+            
+            dark:bg-black/80 dark:text-white 
+            
             ">
                 <a data-i18n="common.nav.home" href="index.html" class="eachNavLink hoverEffect text-inherit ">Home</a>
                 <a data-i18n="common.nav.about" href="about-us.html" class="eachNavLink hoverEffect text-inherit">About
@@ -69,6 +73,11 @@
                         <option data-i18n="common.nav.language.spanish" value="es">Español</option>
                     </select>
                 </div>
+                <button class="" id="toggler">
+                    <i id="sunIcon" class="fa-solid fa-sun text-2xl" style="color: #FFD43B;"></i>
+                    <i id="moonIcon" class='fa-solid  text-2xl hid' style='color: #ffffff'></i>
+
+                </button>
 
             </nav>
         </div>
@@ -123,6 +132,8 @@
                     class="closeModal bg-blue-700 text-white font-bold self-end p-1 rounded-md">Close</button>
             </dialog>
 
+
+
         </div>
     </div>
 
@@ -160,7 +171,7 @@
                 </div>
             </div>
         </section>
-        <section class="sectionChildren bg-[url(../images/waves.svg)] bg-indigo-800 text-white ">
+        <section class="sectionChildren bg-[url(../images/waves.svg)] bg-indigo-800 text-white dark:bg-[url()]">
             <h2 data-i18n="index.howItWorks.heading" class=" self-center text-3xl font-bold">How It Works</h2>
             <hr class="h-1 w-38 self-center bg-gradient-to-r from-red-500 to-indigo-500">
             <p data-i18n="index.howItWorks.description">Our streamline process ensures your freight is handled
@@ -221,8 +232,8 @@
                             the best value.</p>
                     </div>
                     <div class="flex-1">
-                        <img class="w-120 h-80 object-bottom object-cover rounded-md" src="images/open-shipping.jpg"
-                            alt="">
+                        <img class="w-120 h-80 object-bottom object-cover rounded-md dark:shadow-light "
+                            src="images/open-shipping.jpg" alt="">
                     </div>
                 </div>
                 <div class="serveCard scroll-animate">
@@ -236,7 +247,8 @@
                             extra attention.</p>
                     </div>
                     <div class="flex-1">
-                        <img class="w-120 h-80 object-bottom object-cover rounded-md" src="images/enclosed.webp" alt="">
+                        <img class="w-120 h-80 object-bottom dark:shadow-light object-cover rounded-md "
+                            src="images/enclosed.webp" alt="">
                     </div>
                 </div>
                 <!-- <div class="serveCard scroll-animate">
@@ -258,7 +270,8 @@
                             and other recreational vehicles with care, offering
                             both open and enclosed transport options.</p>
                     </div>
-                    <div class="flex-1"><img class="w-120 h-80 object-cover rounded-md" src="images/atv-2.jpg" alt="">
+                    <div class="flex-1"><img class="w-120 h-80 object-cover rounded-md dark:shadow-light "
+                            src="images/atv-2.jpg" alt="">
                     </div>
                 </div>
             </div>
@@ -295,7 +308,7 @@
 
 
     <div class="h-1 bg-gradient-to-r from-indigo-600 via-red-600 to-lime-500"></div>
-    <footer class="w-full bg-radial from-indigo-900 to-indigo-950 shadow-2xl">
+    <footer class="w-full bg-blue-900 dark:bg-black/95">
         <div class="p-8 flex flex-col justify-between items-center gap-4 
         lg:flex-row lg:justify-center lg:gap-60">
             <div class="flex flex-col items-center gap-3">

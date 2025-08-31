@@ -7,23 +7,33 @@ const closeIcon = document.getElementById("closeIcon");
 
 if (hero) {
   window.addEventListener("scroll", () => {
+    const isDark = document.documentElement.classList.contains("dark");
     const heroHeight = hero.offsetHeight;
     const headerHeight = myHeader.offsetHeight;
     const scrollY = window.scrollY;
 
     if (scrollY > heroHeight - headerHeight) {
-      myNav.classList.remove("lg:text-white");
-      myNav.classList.add("lg:text-black");
+      if (isDark) {
+        myNav.classList.remove("lg:text-black");
+        myNav.classList.add("lg:text-white");
+        burgerIcon.classList.remove("text-black");
+        burgerIcon.classList.add("text-white");
+        closeIcon.classList.remove("text-black");
+        closeIcon.classList.add("text-white");
+      } else {
+        myNav.classList.remove("lg:text-white");
+        myNav.classList.add("lg:text-black");
+        burgerIcon.classList.remove("text-white");
+        burgerIcon.classList.add("text-black");
+        closeIcon.classList.remove("text-white");
+        closeIcon.classList.add("text-black");
+      }
       myHeader.classList.add(
         "border-b-2",
         "border-b-blue-500",
         "shadow-md",
         "bg-white/99"
       );
-      burgerIcon.classList.remove("text-white");
-      burgerIcon.classList.add("text-black");
-      closeIcon.classList.remove("text-white");
-      closeIcon.classList.add("text-black");
     } else {
       myNav.classList.add("lg:text-white");
       myNav.classList.remove("lg:text-black");
@@ -269,3 +279,16 @@ document.getElementById("lang-select").addEventListener("change", () => {
 // }
 
 // selectLanguage.addEventListener("change", setLanguage);
+
+const themeToggler = document.getElementById("toggler");
+const sunIcon = document.getElementById("sunIcon");
+const moonIcon = document.getElementById("moonIcon");
+
+themeToggler.addEventListener("click", () => {
+  sunIcon.classList.toggle("fa-sun");
+  moonIcon.classList.toggle("fa-moon");
+  document.documentElement.classList.toggle("dark");
+  const isDark = document.documentElement.classList.contains("dark");
+
+  localStorage.setItem("theme", isDark ? "dark" : "light");
+});

@@ -2,8 +2,12 @@
 
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --font-roboto: "Roboto", sans-serif;
+  --shadow-steps: 0 0 10px 6px hsla(0, 0%, 0%, 0.053);
+  --shadow-light: 0 0 10px 6px hsla(241, 43%, 28%, 0.911);
 }
 
 .button {
@@ -18,22 +22,18 @@
 }
 
 .sectionChildren {
-  @apply flex flex-col gap-5 px-6 lg:px-20 pt-16 pb-18 lg:py-20;
+  @apply flex flex-col gap-5 px-6 lg:px-20 pt-16 pb-18 lg:py-20 dark:bg-black/95 dark:text-white transition-colors duration-300;
 }
 
 .eachStep {
   @apply lg:flex lg:flex-col;
 }
 .card {
-  @apply flex flex-col items-stretch  p-4 gap-2 rounded-md flex-1 min-w-[200px] lg:h-54 text-justify;
-
-  box-shadow: 0 0 10px 6px hsla(0, 0%, 0%, 0.053);
+  @apply flex flex-col items-stretch  p-4 gap-2 rounded-md flex-1 min-w-[200px] lg:h-54 text-justify shadow-steps dark:shadow-light;
 }
 
 .valueCard {
   @apply flex flex-col items-stretch p-6 gap-2 rounded-md flex-1 min-w-[200px] lg:min-h-fit bg-white text-justify lg:text-left;
-
-  box-shadow: 0 0 10px 6px hsla(0, 0%, 0%, 0.053);
 }
 
 .serveCard {
