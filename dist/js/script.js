@@ -87,6 +87,7 @@ openModal.forEach((modalBtn) => {
   modalBtn.addEventListener("click", () => {
     modal.showModal();
     modal.classList.add("flex");
+    history.pushState({ modalOpen: true }, "");
   });
 });
 
@@ -94,8 +95,26 @@ if (modal) {
   closeModal.addEventListener("click", () => {
     modal.close();
     modal.classList.remove("flex");
+
+    if (history.state && history.state.modalOpen) {
+      history.back();
+    }
   });
 }
+
+window.addEventListener("popstate", (event) => {
+  if (event.state && event.state.modalOpen) {
+    // Modal is open, so close it
+    closeModal.addEventListener("click", () => {
+      modal.close();
+      modal.classList.remove("flex");
+
+      if (history.state && history.state.modalOpen) {
+        history.back();
+      }
+    });
+  }
+});
 
 //verticall scroll for How it works section
 
