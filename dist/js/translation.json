@@ -5,7 +5,11 @@
         "nav": {
           "home": "Home",
           "about": "About Us",
-          "contact": "Contact Us"
+          "contact": "Contact Us",
+          "language": {
+            "english": "English",
+            "spanish": "Spanish"
+          }
         },
         "footer": {
           "home": "Home",
@@ -59,14 +63,17 @@
         },
         "whoWeServe": {
           "heading": "Who We Serve",
+
+          "open": {
+            "title": "Open Auto Shipping",
+            "description": "Our Open Auto Shipping service is the most popular and cost-effective way to transport your vehicle. Cars are securely loaded onto an open carrier that typically holds 7–10 vehicles, making it fast and efficient for long-distance moves. This option is ideal for standard sedans, SUVs, and trucks, offering reliable transport at the best value."
+          },
+
           "enclosed": {
             "title": "Enclosed Freight",
-            "description": "Our enclosed transport options protect sensitive or high-value freight from weather and road debris during transit."
+            "description": "Our Enclosed Auto Shipping service provides the highest level of protection and care for your vehicle. Cars are transported inside a fully enclosed trailer, shielded from weather, road debris, and dust throughout the journey. This premium option is ideal for luxury, classic, exotic, and high-value vehicles that require extra attention."
           },
-          "oversize": {
-            "title": "Oversize Load",
-            "description": "We handle oversized and heavy equipment shipments, including construction machinery and industrial vehicles, with specialized carriers."
-          },
+
           "recreational": {
             "title": "Recreational Vehicle",
             "description": "We move motorcycles, ATVs, UTVs, RVs, and other recreational vehicles with care, offering both open and enclosed transport options."
@@ -166,7 +173,11 @@
         "nav": {
           "home": "Inicio",
           "about": "Nosotros",
-          "contact": "Contactanos"
+          "contact": "Contactanos",
+          "language": {
+            "english": "Ingles",
+            "spanish": "Español"
+          }
         },
         "footer": {
           "home": "Inicio",
@@ -219,14 +230,17 @@
         },
         "whoWeServe": {
           "heading": "A Quién Servimos",
+
+          "open": {
+            "title": "Open Auto Shipping",
+            "description": "Nuestro servicio Open Auto Shipping es la forma más popular y rentable de transportar su vehículo. Los automóviles se cargan de forma segura en un trailer abierto que normalmente tiene capacidad para 7–10 vehículos, lo que lo hace rápido y eficiente para movimientos de larga distancia. Esta opción es ideal para sedanes, SUV y camionetas estándar, ofreciendo un transporte confiable al mejor precio."
+          },
+
           "enclosed": {
             "title": "Carga Cerrada",
-            "description": "Nuestras opciones de transporte cerrado protegen la carga sensible o de alto valor del clima y los escombros de la carretera durante el tránsito."
+            "description": "Nuestro servicio de envío automático cerrado brinda el más alto nivel de protección y cuidado para su vehículo. Los automóviles se transportan dentro de un remolque completamente cerrado, protegidos del clima, los escombros de la carretera y el polvo durante todo el viaje. Esta opción premium es ideal para vehículos de lujo, clásicos, exóticos y de alto valor que requieren atención adicional."
           },
-          "oversize": {
-            "title": "Carga Pesada",
-            "description": "Manejamos envíos de equipos pesados y sobredimensionados, incluyendo maquinaria de construcción y vehículos industriales, con transportistas especializados."
-          },
+
           "recreational": {
             "title": "Vehículo Recreativo",
             "description": "Movemos motocicletas, ATVs, UTVs, RVs y otros vehículos recreativos con cuidado, ofreciendo opciones de transporte abierto y cerrado."

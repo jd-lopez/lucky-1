@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MyLucky1</title>
+    <title>lucky1</title>
     <link rel="stylesheet" href="css/output.css">
     <link rel="icon" href="images/Logo_lucky.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -41,10 +41,10 @@
 
 
             <nav id="myNav" class="text-black
-                        flex flex-col items-center absolute  shadow-xl bg-white backdrop-blur-2xl top-24 -right-52 pb-4 pr-8 
+                        flex flex-col items-center absolute  shadow-xl bg-white backdrop-blur-2xl top-24 -right-52 pb-4 pr-8 gap-4 
                         md:top-29
                         lg:flex lg:flex-row lg:justify-between lg:px-3 lg:text-sm font-bold lg:static lg:bg-inherit lg:backdrop-blur-none lg:shadow-none lg:translate-x-0 
-                        lg:transition-all lg:duration-150 lg:delay-100 gap-4
+                        lg:transition-all lg:duration-150 lg:delay-100 lg:pb-0
                         group
                         ">
                 <a data-i18n="common.nav.home" href="index.html" class="eachNavLink hoverEffect text-inherit ">Home</a>
@@ -79,7 +79,7 @@
     <main class="font-roboto text-base
      overflow-hidden mt-24">
         <section class=" px-6 lg:px-20 py-6 bg-no-repeat">
-            <div class="flex flex-col lg:w-2/4 mt-14">
+            <div class="flex flex-col  mt-14 px-48">
                 <h1 data-i18n="contact.heading" class="text-center text-2xl font-bold">Contact us and get a quota for
                     free.</h1>
                 <hr class="h-1 w-80 self-center bg-gradient-to-r from-red-500 to-indigo-500 mb-8">
@@ -103,10 +103,29 @@
                         <label data-i18n="contact.form.phone" class="label" for="inputPhone">Phone</label>
                         <input class="inputField" id="inputPhone" type="tel" name="phone" required>
                     </div>
-                    <div class="inputWrapper">
+
+                    <fieldset>
+                        <legend class="font-bold">Select the type of vehicle</legend>
+
+                        <div class="flex items-center gap-2">
+                            <input id="suv" type="checkbox" name="suv" value="SUV" class=" size-4">
+                            <label for="suv">SUV</label>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <input id="atv" type="checkbox" name="atv" value="ATV" class=" size-4">
+                            <label for="atv">ATV</label>
+                        </div>
+
+                        <div class="flex items-center gap-2">
+                            <input id="luxury" type="checkbox" name="luxury" value="Luxury" class=" size-4">
+                            <label for="luxury">Luxury</label>
+                        </div>
+                    </fieldset>
+
+                    <!-- <div class="inputWrapper">
                         <label data-i18n="contact.form.vehicle" class="label" for="inputVehicle">Vehicle Type</label>
-                        <input class="inputField" id="inputVehicle" type="text" name="Vehicle_type" required>
-                    </div>
+                        <input class="inputField" id="inputVehicle" type="radio" name="Vehicle_type" required>
+                    </div> -->
                     <div class="inputWrapper">
                         <label data-i18n="contact.form.pickup" class="label" for="pickupInput">Pickup location</label>
                         <input class="inputField" id="pickupInput" type="text" name="Pickup_location" required>
@@ -116,17 +135,43 @@
                             Location</label>
                         <input class="inputField" id="inputDelivery" type="text" name="delivery_location" required>
                     </div>
-                    <div class="inputWrapper">
+
+                    <fieldset>
+                        <legend class="font-bold">Select the type of transport</legend>
+
+                        <div class="flex items-center gap-2">
+                            <input id="openTrans" type="checkbox" name="open" value="Open" class=" size-4">
+                            <label for="openTrans">Open Shipping</label>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <input id="closedTrans" type="checkbox" name="enclosed" value="Enclosed" class=" size-4">
+                            <label for="closedTrans">Enclosed Shipping</label>
+                        </div>
+                    </fieldset>
+                    <!-- <div class="inputWrapper">
                         <label data-i18n="contact.form.transport" class="label" for="inputTransport">Preferred Transport
                             type</label>
                         <input class="inputField" id="inputTransport" type="text" name="preferred_transport_type"
                             required>
-                    </div>
-                    <div class="inputWrapper">
+                    </div> -->
+                    <!-- <div class="inputWrapper">
                         <label data-i18n="contact.form.language" class="label" for="languageInput">Preferred
                             Language</label>
                         <input class="inputField" id="languageInput" type="text" name="preferred_language" required>
-                    </div>
+                    </div> -->
+
+                    <fieldset>
+                        <legend class="font-bold">Preferred Language</legend>
+
+                        <div class="flex items-center gap-2">
+                            <input id="english" type="checkbox" name="english" value="English" class=" size-4">
+                            <label for="english">English</label>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <input id="spanish" type="checkbox" name="spanish" value="Spanish" class=" size-4">
+                            <label for="spanish">Spanish</label>
+                        </div>
+                    </fieldset>
 
                     <div class="inputWrapper">
                         <label data-i18n="contact.form.comments" class="label" for="comment">Comments (optional)</label>
@@ -137,7 +182,7 @@
 
                     <div d class="flex justify-between">
                         <button data-i18n="contact.form.submit" class="button" type="submit">Submit</button>
-                        <button data-i18n="contact.form.clear" type=" reset"
+                        <button data-i18n="contact.form.clear" type="reset"
                             class="text-red-700 font-bold cursor-pointer" id="clear">Clear
                             Form</button>
                     </div>
@@ -148,7 +193,7 @@
             </div>
         </section>
 
-        <section class="bg-white px-6 lg:px-20 py-6">
+        <section class="bg-white px-6 text-center lg:px-20 py-6">
             <div class="flex flex-col">
                 <h1 data-i18n="contact.info.heading" class="self-center text-lg font-bold">Our Contact information</h1>
                 <hr class="h-1 w-38 self-center bg-gradient-to-r from-red-500 to-indigo-500 mb-8">

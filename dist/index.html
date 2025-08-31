@@ -44,10 +44,10 @@
 
 
             <nav id="myNav" class="text-black
-            flex flex-col items-center absolute  shadow-xl bg-white backdrop-blur-2xl top-24 -right-52 pb-4 pr-8 
+            flex flex-col items-center absolute  shadow-xl bg-white backdrop-blur-2xl top-24 -right-52 pb-4 pr-8 gap-4
             md:top-29
             lg:flex lg:flex-row lg:justify-between lg:px-3 lg:text-sm font-bold lg:static lg:bg-inherit lg:backdrop-blur-none lg:shadow-none lg:translate-x-0 lg:text-white
-            lg:transition-all lg:duration-150 lg:delay-100 gap-4
+            lg:transition-all lg:duration-150 lg:delay-100 lg:pb-0
             group
             ">
                 <a data-i18n="common.nav.home" href="index.html" class="eachNavLink hoverEffect text-inherit ">Home</a>
@@ -65,8 +65,8 @@
                         <span id="esFlag" class=" fi-es"></span>
                     </div>
                     <select name="lang" id="lang-select" class="outline-0 open:bg-blue-200">
-                        <option value="en" selected>English</option>
-                        <option value="es">Español</option>
+                        <option data-i18n="common.nav.language.english" value="en" selected>English</option>
+                        <option data-i18n="common.nav.language.spanish" value="es">Español</option>
                     </select>
                 </div>
 
@@ -129,8 +129,8 @@
     <div class="h-1 bg-gradient-to-r from-indigo-600 via-red-600 to-lime-500"></div>
 
 
-    <main class="font-roboto text-base overflow-x-hidden">
-        <section class="sectionChildren  ">
+    <main class="font-roboto text-base overflow-x-hidden ">
+        <section class="sectionChildren ">
             <h1 data-i18n="index.whoWeAre.title" class="self-center text-2xl font-bold">
                 Who We Are</h1>
             <hr class="h-1 w-38 self-center bg-gradient-to-r from-red-500 to-indigo-500">
@@ -208,18 +208,38 @@
             <hr class="h-1 w-38 self-center bg-gradient-to-r from-red-500 to-indigo-500">
 
             <div class="flex flex-col mt-4 gap-8 ">
+
                 <div class="serveCard scroll-animate">
                     <div class="flex-1">
-                        <h2 data-i18n="index.whoWeServe.enclosed.title" class="font-bold text-lg">Enclosed Freight</h2>
-                        <p data-i18n="index.whoWeServe.enclosed.description">Our enclosed transport options protect
-                            sensitive or high-value freight from weather and
-                            road debris during transit.</p>
+                        <h2 data-i18n="index.whoWeServe.open.title" class="font-bold text-lg">Open Auto Shipping
+                        </h2>
+                        <p data-i18n="index.whoWeServe.open.description">Our Open Auto Shipping service is the most
+                            popular and cost-effective way to transport your vehicle. Cars are securely
+                            loaded onto an open carrier that typically holds 7–10 vehicles, making it fast and efficient
+                            for long-distance moves.
+                            This option is ideal for standard sedans, SUVs, and trucks, offering reliable transport at
+                            the best value.</p>
                     </div>
                     <div class="flex-1">
-                        <img class="w-120 h-50 object-bottom-right rounded-md" src="images/highway-blue-sky.jpg" alt="">
+                        <img class="w-120 h-80 object-bottom object-cover rounded-md" src="images/open-shipping.jpg"
+                            alt="">
                     </div>
                 </div>
                 <div class="serveCard scroll-animate">
+                    <div class="flex-1">
+                        <h2 data-i18n="index.whoWeServe.enclosed.title" class="font-bold text-lg">Enclosed Freight</h2>
+                        <p data-i18n="index.whoWeServe.enclosed.description">Our Enclosed Auto Shipping service provides
+                            the highest level of protection and care for your vehicle. Cars are
+                            transported inside a fully enclosed trailer, shielded from weather, road debris, and dust
+                            throughout the journey. This
+                            premium option is ideal for luxury, classic, exotic, and high-value vehicles that require
+                            extra attention.</p>
+                    </div>
+                    <div class="flex-1">
+                        <img class="w-120 h-80 object-bottom object-cover rounded-md" src="images/enclosed.webp" alt="">
+                    </div>
+                </div>
+                <!-- <div class="serveCard scroll-animate">
                     <div class="flex-1">
                         <h2 data-i18n="index.whoWeServe.oversize.title" class="font-bold text-lg">Oversize Load</h2>
                         <p data-i18n="index.whoWeServe.oversize.description">We handle oversized and heavy equipment
@@ -229,7 +249,7 @@
                     <div class="flex-1">
                         <img class="w-120 h-50 object-cover rounded-md" src="images/oversize-load.jpg" alt="">
                     </div>
-                </div>
+                </div> -->
                 <div class="serveCard scroll-animate">
                     <div class="flex-1">
                         <h2 data-i18n="index.whoWeServe.recreational.title" class="font-bold text-lg">Recreational
@@ -238,7 +258,7 @@
                             and other recreational vehicles with care, offering
                             both open and enclosed transport options.</p>
                     </div>
-                    <div class="flex-1"><img class="w-120 h-50 object-cover rounded-md" src="images/atv-2.jpg" alt="">
+                    <div class="flex-1"><img class="w-120 h-80 object-cover rounded-md" src="images/atv-2.jpg" alt="">
                     </div>
                 </div>
             </div>
