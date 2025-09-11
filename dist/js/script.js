@@ -280,15 +280,45 @@ document.getElementById("lang-select").addEventListener("change", () => {
 
 // selectLanguage.addEventListener("change", setLanguage);
 
-const themeToggler = document.getElementById("toggler");
-const sunIcon = document.getElementById("sunIcon");
-const moonIcon = document.getElementById("moonIcon");
+const themeToggler = document.querySelectorAll(".toggler");
+const sunIcon = document.querySelectorAll(".sunIcon");
+const moonIcon = document.querySelectorAll(".moonIcon");
 
-themeToggler.addEventListener("click", () => {
-  sunIcon.classList.toggle("fa-sun");
-  moonIcon.classList.toggle("fa-moon");
-  document.documentElement.classList.toggle("dark");
-  const isDark = document.documentElement.classList.contains("dark");
+// themeToggler.addEventListener("click", () => {
+//   sunIcon.classList.toggle("fa-sun");
+//   moonIcon.classList.toggle("fa-moon");
+//   document.documentElement.classList.toggle("dark");
 
-  localStorage.setItem("theme", isDark ? "dark" : "light");
+//   const isDark = document.documentElement.classList.contains("dark");
+
+//   localStorage.setItem("theme", isDark ? "dark" : "light");
+// });
+
+themeToggler.forEach((toggler) => {
+  toggler.addEventListener("click", () => {
+    sunIcon.forEach((sun) => {
+      sun.classList.toggle("fa-sun");
+    });
+    moonIcon.forEach((moon) => {
+      moon.classList.toggle("fa-moon");
+    });
+
+    document.documentElement.classList.toggle("dark");
+
+    const isDark = document.documentElement.classList.contains("dark");
+
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+  });
+});
+
+window.addEventListener("DOMContentLoaded", () => {
+  if (localStorage.getItem("theme") === "dark") {
+    document.documentElement.classList.add("dark");
+    sunIcon.forEach((sun) => {
+      sun.classList.remove("fa-sun");
+    });
+    moonIcon.forEach((moon) => {
+      moon.classList.add("fa-moon");
+    });
+  }
 });

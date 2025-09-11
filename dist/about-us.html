@@ -19,7 +19,9 @@
 
 <body class="relative font-roboto text-base h-dvh overflow-x-hidden">
     <header id="myHeader" class="px-5 py-2 shadow-xl bg-white  fixed top-0 w-full z-70 
-        md:px-15 md:shadow-xl border-b-2 border-b-cyan-600">
+        md:px-15 md:shadow-xl border-b-2 border-b-cyan-600
+        dark:bg-black/95 dark:text-white
+        ">
         <div class="flex justify-between items-center">
             <div class="size-20 flex flex-col items-center
                             md:size-25">
@@ -48,6 +50,7 @@
                     lg:flex lg:flex-row lg:justify-between lg:px-3 lg:text-sm font-bold lg:static lg:bg-inherit lg:backdrop-blur-none lg:shadow-none lg:translate-x-0 
                     lg:transition-all lg:duration-150 lg:delay-100  lg:pb-0
                     group
+                    dark:text-white
                     ">
                 <a data-i18n="common.nav.home" href="index.html" class="eachNavLink hoverEffect text-inherit ">Home</a>
                 <a data-i18n="common.nav.about" href="about-us.html" class="eachNavLink hoverEffect text-inherit">About
@@ -55,18 +58,24 @@
                 <a data-i18n="common.nav.contact" href="contact.html"
                     class="eachNavLink hoverEffect text-inherit">Contact Us</a>
 
-                <div id="flag-container" class="flex items-center gap-2 px-2 text-black">
+                <div id="flag-container" class="flex items-center gap-2 px-2 outline rounded-md">
 
                     <div class="">
                         <span id="usFlag" class="fi fi-us"></span>
                         <span id="esFlag" class=" fi-es"></span>
                     </div>
-                    <select name="lang" id="lang-select" class="outline-0 open:bg-blue-400">
+                    <select name="lang" id="lang-select" class="outline-0 open:bg-blue-400
+                    dark:text-white
+                    ">
                         <option value="en" selected>English</option>
                         <option value="es">Español</option>
                     </select>
                 </div>
+                <button class="toggler">
+                    <i class="sunIcon fa-solid fa-sun text-2xl" style="color: #FFD43B;"></i>
+                    <i class='moonIcon fa-solid  text-2xl hid' style='color: #ffffff'></i>
 
+                </button>
             </nav>
         </div>
 
@@ -86,7 +95,9 @@
 
     <main class="font-roboto text-base mt-12
     overflow-hidden">
-        <section class="sectionChildren bg-[url(../images/bottom_blue.svg)] bg-cover bg-center ">
+        <section class="sectionChildren bg-[url(../images/bottom_blue.svg)] bg-cover bg-center 
+        dark:bg-[url()]
+        ">
             <h1 data-i18n="about.pageTitle" class="text-2xl font-bold self-center">About Us</h1>
             <hr class="h-1 w-38 self-center bg-gradient-to-r from-indigo-500 via-blue-400 to-lime-300">
             <p data-i18n="about.intro" class="text-center">
@@ -100,7 +111,7 @@
 
             <div class="flex flex-col gap-4 lg:gap-7 justify-between
             lg:flex-row">
-                <div class="card gap-4">
+                <div class="card bg-white gap-4">
                     <h1 data-i18n="about.whoWeAre.heading" class="self-center text-lg font-bold">Who We Are</h1>
                     <p data-i18n="about.whoWeAre.description" class="flex-1">We’re not just intermediaries—we’re
                         logistics partners. With years of experience
@@ -118,7 +129,7 @@
                 </div>
 
 
-                <div class="card gap-4">
+                <div class="card bg-white gap-4">
                     <h1 data-i18n="about.mission.heading" class=" self-center text-lg font-bold">Our Mission</h1>
                     <p data-i18n="about.mission.description" class="flex-1">To simplify freight transport for shippers
                         and carriers by delivering responsive
@@ -141,7 +152,7 @@
                 </p>
                 <div class="flex flex-col gap-6 justify-center flex-wrap mt-4 howParent
                 lg:flex-row">
-                    <div class="valueCard vert-scroll-animate">
+                    <div class="valueCard  vert-scroll-animate">
                         <h1 data-i18n="about.ourValues.eachValue.integrity.title" class="self-center text-lg font-bold">
                             Integrity
                         </h1>
@@ -178,7 +189,7 @@
                             improvement.
                         </p>
                     </div>
-                    <div class="valueCard vert-scroll-animate mx-auto">
+                    <div class="valueCard  vert-scroll-animate mx-auto">
                         <h1 data-i18n="about.ourValues.eachValue.accountability.title"
                             class="self-center text-lg font-bold">Accountability</h1>
                         <p data-i18n="about.ourValues.eachValue.accountability.description">We take full ownership of
@@ -191,7 +202,9 @@
             </div>
         </section>
 
-        <section class="sectionChildren bg-[url(../images/fromTop.svg)] bg-no-repeat bg-cover lg:bg-bottom-left bg-top">
+        <section class="sectionChildren bg-[url(../images/fromTop.svg)] bg-no-repeat bg-cover lg:bg-bottom-left bg-top
+        dark:bg-[url()]
+        ">
             <div class="flex flex-col gap-8 items-center">
                 <h1 data-i18n="about.moveForward.heading" class="self-center text-2xl font-bold">Let’s Move Forward</h1>
                 <p data-i18n="about.moveForward.description" class="text-justify px-16 lg:px-44">
@@ -232,7 +245,9 @@
 
 
     <div class="h-1 bg-gradient-to-r from-indigo-600 via-red-600 to-lime-500"></div>
-    <footer class="w-full bg-radial from-indigo-900 to-indigo-950 shadow-2xl">
+    <footer class="w-full bg-radial from-indigo-900 to-indigo-950 shadow-2xl
+        dark:bg-linear-0 dark:from-black dark:to-black/95
+        ">
         <div class="p-8 flex flex-col justify-between items-center gap-4 
             lg:flex-row lg:justify-center lg:gap-60">
             <div class="flex flex-col items-center gap-3">
