@@ -17,10 +17,9 @@
 
 </head>
 
-<body class="relative font-roboto text-base h-dvh overflow-x-hidden dark:bg-linear-(--my-gradient) dark:text-white">
-    <header id="myHeader" class="px-5 py-2 shadow-xl  dark:bg-linear-(--my-gradient) dark:text-white bg-white fixed top-0 w-full z-70 
-        md:px-15 md:shadow-xl border-b-2 border-b-cyan-600
-        ">
+<body class="relative font-roboto text-base h-dvh overflow-x-hidden">
+    <header id="myHeader" class="px-5 py-2 shadow-xl bg-white  fixed top-0 w-full z-70 
+        md:px-15 md:shadow-xl border-b-2 border-b-cyan-600">
         <div class="flex justify-between items-center">
             <div class="size-20 flex flex-col items-center
                             md:size-25">
@@ -49,7 +48,6 @@
                     lg:flex lg:flex-row lg:justify-between lg:px-3 lg:text-sm font-bold lg:static lg:bg-inherit lg:backdrop-blur-none lg:shadow-none lg:translate-x-0 
                     lg:transition-all lg:duration-150 lg:delay-100  lg:pb-0
                     group
-                    dark: dark:text-white
                     ">
                 <a data-i18n="common.nav.home" href="index.html" class="eachNavLink hoverEffect text-inherit ">Home</a>
                 <a data-i18n="common.nav.about" href="about-us.html" class="eachNavLink hoverEffect text-inherit">About
@@ -63,15 +61,12 @@
                         <span id="usFlag" class="fi fi-us"></span>
                         <span id="esFlag" class=" fi-es"></span>
                     </div>
-                    <select name="lang" id="lang-select" class="outline-0 open:bg-blue-400 dark:text-white">
+                    <select name="lang" id="lang-select" class="outline-0 open:bg-blue-400">
                         <option value="en" selected>English</option>
                         <option value="es">Español</option>
                     </select>
                 </div>
-                <button class="toggler flex content-center" id="toggler">
-                    <i id="" class="sunIcon fa-solid fa-sun text-2xl" style="color: #FFD43B;"></i>
-                    <i id="" class='moonIcon fa-solid  text-2xl' style='color: #ffffff'></i>
-                </button>
+
             </nav>
         </div>
 
@@ -86,7 +81,7 @@
 
 
 
-
+    <div class="h-1 bg-gradient-to-r from-indigo-600 via-red-600 to-lime-500"></div>
 
 
     <main class="font-roboto text-base mt-12

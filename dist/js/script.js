@@ -280,46 +280,15 @@ document.getElementById("lang-select").addEventListener("change", () => {
 
 // selectLanguage.addEventListener("change", setLanguage);
 
-// const themeToggler = document.querySelectorAll(".toggler");
-// const sunIcon = document.querySelectorAll(".sunIcon");
-// const moonIcon = document.querySelectorAll(".moonIcon");
+const themeToggler = document.getElementById("toggler");
+const sunIcon = document.getElementById("sunIcon");
+const moonIcon = document.getElementById("moonIcon");
 
-// if (localStorage.getItem("theme") === "dark") {
-//   document.documentElement.classList.add("dark");
-// } else {
-//   document.documentElement.classList.remove("dark");
-// }
-// themeToggler.forEach((toggler, index) => {
-//   toggler.addEventListener("click", () => {
-//     sunIcon[index].classList.toggle("fa-sun");
-//     moonIcon[index].classList.toggle("fa-moon");
-//     document.documentElement.classList.toggle("dark");
-//     const isDark = document.documentElement.classList.contains("dark");
-//     localStorage.setItem("theme", isDark ? "dark" : "light");
-//   });
-// });
-
-const themeToggler = document.querySelectorAll(".toggler");
-const sunIcon = document.querySelectorAll(".sunIcon");
-const moonIcon = document.querySelectorAll(".moonIcon");
-
-// Set initial theme from localStorage
-if (localStorage.getItem("theme") === "dark") {
-  document.documentElement.classList.add("dark");
-} else {
-  document.documentElement.classList.remove("dark");
-}
-
-// Function to update icon visibility
-function updateIcons() {
+themeToggler.addEventListener("click", () => {
+  sunIcon.classList.toggle("fa-sun");
+  moonIcon.classList.toggle("fa-moon");
+  document.documentElement.classList.toggle("dark");
   const isDark = document.documentElement.classList.contains("dark");
-  sunIcon.forEach(
-    (icon, index) => (icon.style.display = isDark ? "none" : "block")
-  );
-  moonIcon.forEach(
-    (icon, index) => (icon.style.display = isDark ? "block" : "none")
-  );
-}
 
-// Run once on page load
-updateIcons();
+  localStorage.setItem("theme", isDark ? "dark" : "light");
+});
