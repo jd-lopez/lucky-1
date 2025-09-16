@@ -7,7 +7,9 @@
 @theme {
   --font-roboto: "Roboto", sans-serif;
   --shadow-steps: 0 0 15px 3px hsla(241, 38%, 25%, 0.32);
-  --shadow-light: 0 0 10px 3px hsl(0, 0%, 76%);
+  --shadow-light: 0 0 6px 1px hsl(0, 0%, 76%);
+  --color-darkbg: #020a24;
+  --color-cardbg: #161e36;
 }
 
 .button {
@@ -22,18 +24,18 @@
 }
 
 .sectionChildren {
-  @apply flex flex-col gap-5 px-6 lg:px-20 pt-16 pb-18 lg:py-20 dark:bg-black/95 dark:text-white transition-colors duration-300;
+  @apply flex flex-col gap-5 px-6 lg:px-20 pt-16 pb-18 lg:py-20 dark:bg-darkbg dark:text-white transition-colors duration-300;
 }
 
 .eachStep {
   @apply lg:flex lg:flex-col;
 }
 .card {
-  @apply flex flex-col items-stretch  p-4 gap-2 rounded-md flex-1 min-w-[200px] lg:h-54 text-justify shadow-steps dark:shadow-light dark:bg-gray-500;
+  @apply flex flex-col items-stretch  p-4 gap-2 rounded-md flex-1 min-w-[200px] lg:h-54 text-justify shadow-steps dark:shadow-light dark:bg-cardbg;
 }
 
 .valueCard {
-  @apply flex flex-col items-stretch p-6 gap-2 rounded-md flex-1 min-w-[200px] lg:min-h-fit bg-white text-justify lg:text-left shadow-light dark:bg-gray-500 dark:shadow-light;
+  @apply flex flex-col items-stretch p-6 gap-2 rounded-md flex-1 min-w-[200px] lg:min-h-fit bg-white text-justify lg:text-left shadow-light dark:bg-cardbg dark:shadow-light;
 }
 
 .serveCard {

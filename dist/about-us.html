@@ -20,7 +20,7 @@
 <body class="relative font-roboto text-base h-dvh overflow-x-hidden">
     <header id="myHeader" class="px-5 py-2 shadow-xl bg-white  fixed top-0 w-full z-70 
         md:px-15 md:shadow-xl border-b-2 border-b-cyan-600
-        dark:bg-black/95 dark:text-white
+        dark:bg-darkbg dark:text-white
         ">
         <div class="flex justify-between items-center">
             <div class="size-20 flex flex-col items-center
@@ -50,7 +50,7 @@
                     lg:flex lg:flex-row lg:justify-between lg:px-3 lg:text-sm font-bold lg:static lg:bg-inherit lg:backdrop-blur-none lg:shadow-none lg:translate-x-0 
                     lg:transition-all lg:duration-150 lg:delay-100  lg:pb-0
                     group
-                    dark:text-white dark:bg-black/80
+                    dark:text-white dark:bg-darkbg
                     ">
                 <a data-i18n="common.nav.home" href="index.html" class="eachNavLink hoverEffect text-inherit ">Home</a>
                 <a data-i18n="common.nav.about" href="about-us.html" class="eachNavLink hoverEffect text-inherit">About
@@ -99,7 +99,9 @@
         dark:bg-[url()]
         ">
             <h1 data-i18n="about.pageTitle" class="text-2xl font-bold self-center">About Us</h1>
-            <hr class="h-1 w-38 self-center bg-gradient-to-r from-indigo-500 via-blue-400 to-lime-300">
+            <hr class="h-1 w-38 self-center bg-gradient-to-r from-indigo-500 via-blue-400 to-lime-300
+            dark:from-indigo-600 dark:via-red-600 dark:to-lime-500
+            ">
             <p data-i18n="about.intro" class="text-center">
                 At <strong>MyLucky1</strong>, we connect people, cargo, and carriers—delivering reliable transportation
                 solutions
@@ -146,7 +148,9 @@
             <div class="flex flex-col gap-1">
                 <h1 data-i18n="about.ourValues.heading" class="text-2xl font-bold self-center">Our Values
                 </h1>
-                <hr class="h-1 w-38 mt-2 self-center bg-gradient-to-r from-indigo-500 via-blue-400 to-lime-300">
+                <hr class="h-1 w-38 mt-2 self-center bg-gradient-to-r from-indigo-500 via-blue-400 to-lime-300
+                dark:from-indigo-600 dark:via-red-600 dark:to-lime-500
+                ">
                 <p data-i18n="about.ourValues.intro" class="self-center my-8">At the heart of our operations are the
                     values that drive everything we do:
                 </p>
@@ -240,13 +244,43 @@
                     class="closeModal bg-blue-700 text-white font-bold self-end p-1 rounded-md">Close</button>
             </dialog>
         </section>
+
+        <section class="sectionChildren">
+            <div id="accordion" class="flex flex-col justify-between gap-8 px-20">
+                <details class="group">
+                    <summary class="flex justify-between marker:text-blue-700 ">
+                        <h1>What is an Enclosed?</h1>
+                        <span class="group-open:rotate-90 transition-all duration-300 self-end">▶</span>
+                    </summary>
+                    <p class="py-1.5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, molestiae. Iste
+                        quod
+                        dolores consequatur cumque sint fugiat laborum ullam architecto! Obcaecati earum doloremque
+                        praesentium perferendis ipsa, voluptate possimus atque at.
+                        Unde omnis beatae ipsa! Ut neque quasi, cumque totam corporis laborum quibusdam, minima
+                    </p>
+                </details>
+                <details class="group ">
+                    <summary class="flex justify-between marker:text-blue-700  marker:1 ">
+                        <h1>What is an Open Transport?</h1>
+                        <span class="group-open:rotate-90 transition-all duration-300 self-end">▶</span>
+                    </summary>
+                    <p class="pr-80">Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit.
+                        Nostrum, molestiae. Iste
+                        quod
+                        dolores consequatur cumque sint fugiat laborum ullam architecto! Obcaecati earum doloremque
+
+                    </p>
+                </details>
+            </div>
+        </section>
     </main>
 
 
 
     <div class="h-1 bg-gradient-to-r from-indigo-600 via-red-600 to-lime-500"></div>
     <footer class="w-full bg-radial from-indigo-900 to-indigo-950 shadow-2xl
-        dark:bg-linear-0 dark:from-black dark:to-black/95
+        dark:bg-linear-to-b dark:from-darkbg dark:to-darkbg/90
         ">
         <div class="p-8 flex flex-col justify-between items-center gap-4 
             lg:flex-row lg:justify-center lg:gap-60">
