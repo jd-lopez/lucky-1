@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyLucky1</title>
+    <link rel="stylesheet" href="css/output.css">
+    <link rel="icon" href="images/Logo_lucky.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css" />
+    <script src="https://unpkg.com/i18next@23.0.1/i18next.min.js" defer></script>
+    <script src="js/script.js" defer></script>
+
+
+
+</head>
+
+<body class="relative font-roboto text-base h-dvh overflow-x-hidden">
+    <header id="myHeader" class="px-5 py-2 shadow-xl bg-white  fixed top-0 w-full z-70 
+        md:px-15 md:shadow-xl border-b-2 border-b-cyan-600
+        dark:bg-darkbg dark:text-white
+        ">
+        <div class="flex justify-between items-center">
+            <div class="size-20 flex flex-col items-center
+                            md:size-25">
+                <img class="" src="images/Logo_lucky.png" alt="">
+
+            </div>
+
+            <div id="hamburgerContainer" class="lg:hidden size-10">
+                <svg id="burgerIcon" class="size-10 text-black dark:text-white" xmlns="http://www.w3.org/2000/svg"
+                    fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+                <svg id="closeIcon" class="hidden size-10 text-black dark:text-white" xmlns="http://www.w3.org/2000/svg"
+                    fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                </svg>
+            </div>
+
+
+
+
+            <nav id="myNav" class="text-black
+                    flex flex-col items-center absolute  shadow-xl bg-white backdrop-blur-2xl top-24 -right-52 pb-4 pr-8 gap-4
+                    md:top-29
+                    lg:flex lg:flex-row lg:justify-between lg:px-3 lg:text-sm font-bold lg:static lg:bg-inherit lg:backdrop-blur-none lg:shadow-none lg:translate-x-0 
+                    lg:transition-all lg:duration-150 lg:delay-100  lg:pb-0
+                    group
+                    dark:text-white dark:bg-darkbg
+                    ">
+                <a data-i18n="common.nav.home" href="index.html" class="eachNavLink hoverEffect text-inherit ">Home</a>
+                <a data-i18n="common.nav.about" href="about-us.html" class="eachNavLink hoverEffect text-inherit">About
+                    Us</a>
+                <a href="faq.html" class="eachNavLink hoverEffect text-inherit">FAQ</a>
+                <a data-i18n="common.nav.contact" href="contact.html"
+                    class="eachNavLink hoverEffect text-inherit">Contact Us</a>
+
+                <div id="flag-container" class="flex items-center gap-2 px-2 outline rounded-md">
+
+                    <div class="">
+                        <span id="usFlag" class="fi fi-us"></span>
+                        <span id="esFlag" class=" fi-es"></span>
+                    </div>
+                    <select name="lang" id="lang-select" class="outline-0 open:bg-blue-400
+                    dark:text-white
+                    ">
+                        <option value="en" selected>English</option>
+                        <option value="es">Español</option>
+                    </select>
+                </div>
+                <button class="toggler">
+                    <i class="sunIcon fa-solid fa-sun text-2xl" style="color: #FFD43B;"></i>
+                    <i class='moonIcon fa-solid  text-2xl hid' style='color: #ffffff'></i>
+
+                </button>
+            </nav>
+        </div>
+
+
+    </header>
+
+
+
+    <div id="overlay" class="hidden fixed h-dvh top-19 md:top-29 bottom-0 left-0 right-0 z-60 bg-black/50
+    lg:hidden "></div>
+
+
+
+
+    <div class="h-1 bg-gradient-to-r from-indigo-600 via-red-600 to-lime-500"></div>
+
+
+    <main class="font-roboto text-base 
+    overflow-hidden dark:bg-black mt-28">
+
+        <section class="sectionChildren">
+
+            <h1 class="text-2xl font-bold text-center">Have questions about shipping your vehicle?</h1>
+            <p class="lg:px-35">We know arranging auto transport can feel overwhelming, especially if it’s your first
+                time.
+                That’s why
+                we’ve put
+                together answers to the most common questions our customers ask. From pricing and insurance to pickup
+                and delivery,
+                you’ll find everything you need to feel confident about shipping your car with us.</p>
+
+            <input type="text"
+                class="border border-gray-400 p-1 w-full lg:w-3/4 self-center outline-0 rounded-md placeholder:text-gray-400"
+                placeholder="Search for a question">
+            <div id="accordion" class="flex flex-col justify-between gap-8">
+                <div class="flex flex-col gap-3">
+                    <h2 class="text-xl font-bold border-l-4 border-l-blue-700 px-3 mb-3 rounded-l-sm">General Questions
+                    </h2>
+                    <details class="group questionWrapper">
+                        <summary class="flex justify-between marker:text-blue-700 ">
+                            <h1 class="accordQuest">What does a car transport broker do?</h1>
+                            <span class="group-open:rotate-90 transition-all duration-300 self-end">▶</span>
+                        </summary>
+                        <p class="py-1.5">As a transport broker, we connect you with licensed, insured
+                            carriers who will
+                            safely move your vehicle. We don’t own
+                            trucks ourselves but work with a trusted network of carriers to secure the best route,
+                            price,
+                            and timeline for your
+                            shipment. </p>
+                    </details>
+
+                    <details class="group questionWrapper">
+                        <summary class="flex justify-between marker:text-blue-700 ">
+                            <h1 class="accordQuest">Is my vehicle insured during transport?
+                            </h1>
+                            <span class="group-open:rotate-90 transition-all duration-300 self-end">▶</span>
+                        </summary>
+                        <p class="py-1.5">Yes. All carriers we work with must have active cargo and liability insurance.
+                        </p>
+                    </details>
+                    <details class="group questionWrapper">
+                        <summary class="flex justify-between marker:text-blue-700  marker:1 ">
+                            <h1 class="accordQuest">What’s the difference between open and enclosed transport?</h1>
+                            <span class="group-open:rotate-90 transition-all duration-300 self-end">▶</span>
+                        </summary>
+                        <ul class="pr-80">
+                            <li><strong>Open transport:</strong> Most common and affordable option; vehicles are shipped
+                                on
+                                an open carrier
+                                trailer.</li>
+                            <li><strong>Enclosed transport:</strong> Offers extra protection from weather, road debris,
+                                and
+                                visibility—recommended for luxury, classic,
+                                or exotic vehicles.</li>
+                        </ul>
+                    </details>
+                    <details class="group questionWrapper">
+                        <summary class="flex justify-between marker:text-blue-700 ">
+                            <h1 class="accordQuest">Do you guarantee pickup and delivery dates?
+
+                            </h1>
+                            <span class="group-open:rotate-90 transition-all duration-300 self-end">▶</span>
+                        </summary>
+                        <p class="py-1.5">We provide estimated windows. While carriers strive to stay on schedule,
+                            delays due to traffic, weather, or logistics
+                            may occur.
+                        </p>
+                    </details>
+                </div>
+
+                <div class="flex flex-col gap-6">
+                    <h2 class="text-xl font-bold border-l-4 border-l-blue-700 px-3 rounded-l-sm">
+                        Things to Know Before You Begin (Getting a Quote)
+                    </h2>
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-4 gap-y-3 items-start">
+                        <details class="group questionWrapper">
+                            <summary class="flex justify-between marker:text-blue-700 ">
+                                <h1 class="accordQuest">What details do I need to get an instant quote?
+                                </h1>
+                                <span class="group-open:rotate-90 transition-all duration-300 self-end">▶</span>
+                            </summary>
+                            <p class="py-1.5">Pickup/delivery locations, vehicle make and model, transport type, and
+                                shipping dates.</p>
+                        </details>
+                        <details class="group questionWrapper">
+                            <summary class="flex justify-between marker:text-blue-700 ">
+                                <h1 class="accordQuest">How does vehicle size affect my quote?
+                                </h1>
+                                <span class="group-open:rotate-90 transition-all duration-300 self-end">▶</span>
+                            </summary>
+                            <p class="py-1.5">Larger/heavier vehicles cost more to ship than standard sedans.</p>
+                        </details>
+
+                        <details class="group questionWrapper">
+                            <summary class="flex justify-between marker:text-blue-700 ">
+                                <h1 class="accordQuest">Do shipping dates impact pricing?
+                                </h1>
+                                <span class="group-open:rotate-90 transition-all duration-300 self-end">▶</span>
+                            </summary>
+                            <p class="py-1.5">Yes—flexibility often means better rates. Urgent or guaranteed pickups
+                                cost
+                                more.</p>
+                        </details>
+
+                        <details class="group questionWrapper">
+                            <summary class="flex justify-between marker:text-blue-700 ">
+                                <h1 class="accordQuest">Does location matter?
+                                </h1>
+                                <span class="group-open:rotate-90 transition-all duration-300 self-end">▶</span>
+                            </summary>
+                            <p class="py-1.5">Yes. Major cities and busy routes are usually cheaper and faster than
+                                rural
+                                locations.</p>
+                        </details>
+
+                        <details class="group questionWrapper">
+                            <summary class="flex justify-between marker:text-blue-700 ">
+                                <h1 class="accordQuest">Can I ship a non-running vehicle?
+                                </h1>
+                                <span class="group-open:rotate-90 transition-all duration-300 self-end">▶</span>
+                            </summary>
+                            <p class="py-1.5">Yes, but special equipment is needed, which increases cost.</p>
+                        </details>
+                        <details class="group questionWrapper">
+                            <summary class="flex justify-between marker:text-blue-700 ">
+                                <h1 class="accordQuest">Do modifications affect pricing?
+                                </h1>
+                                <span class="group-open:rotate-90 transition-all duration-300 self-end">▶</span>
+                            </summary>
+                            <p class="py-1.5">Yes. Lift kits, oversized tires, or racks can change carrier requirements.
+                            </p>
+                        </details>
+
+                        <details class="group questionWrapper">
+                            <summary class="flex justify-between marker:text-blue-700 ">
+                                <h1 class="accordQuest">Do fuel prices and seasonality affect quotes?
+                                </h1>
+                                <span class="group-open:rotate-90 transition-all duration-300 self-end">▶</span>
+                            </summary>
+                            <p class="py-1.5">Yes. Rates vary depending on fuel costs and seasonal demand.</p>
+                        </details>
+                    </div>
+
+                </div>
+
+                <div class="flex flex-col gap-6">
+                    <h2 class=" text-xl font-bold border-l-4 border-l-blue-700 px-3 rounded-l-sm">Things to Know During
+                        and
+                        After the Process</h2>
+                    <div class="grid grid-cols-1 lg:grid-cols-2 items-start gap-x-4 gap-y-3">
+                        <details class="group questionWrapper">
+                            <summary class="flex justify-between marker:text-blue-700 ">
+                                <h1 class="accordQuest">How will I know when my car will be picked up?
+                                </h1>
+                                <span class="group-open:rotate-90 transition-all duration-300 self-end">▶</span>
+                            </summary>
+                            <p class="py-1.5">You’ll get a pickup window (1–3 days) and a confirmation call from the
+                                driver.</p>
+                        </details>
+
+                        <details class="group questionWrapper">
+                            <summary class="flex justify-between marker:text-blue-700 ">
+                                <h1 class="accordQuest">Can I track my vehicle during transport?
+                                </h1>
+                                <span class="group-open:rotate-90 transition-all duration-300 self-end">▶</span>
+                            </summary>
+                            <p class="py-1.5">Yes—updates are available by phone or through our team.</p>
+                        </details>
+
+                        <details class="group questionWrapper">
+                            <summary class="flex justify-between marker:text-blue-700 ">
+                                <h1 class="accordQuest">What paperwork do I need?</h1>
+                                <span class="group-open:rotate-90 transition-all duration-300 self-end">▶</span>
+                            </summary>
+                            <p class="py-1.5">You’ll sign a Bill of Lading at pickup and delivery, which documents
+                                vehicle condition.</p>
+                        </details>
+
+                        <details class="group questionWrapper">
+                            <summary class="flex justify-between marker:text-blue-700 ">
+                                <h1 class="accordQuest">What should I do at pickup and delivery?</h1>
+                                <span class="group-open:rotate-90 transition-all duration-300 self-end">▶</span>
+                            </summary>
+                            <p class="py-1.5">Inspect the car with the driver, note condition, and take photos.</p>
+                        </details>
+
+                        <details class="group questionWrapper">
+                            <summary class="flex justify-between marker:text-blue-700 ">
+                                <h1 class="accordQuest">What if my car is damaged?</h1>
+                                <span class="group-open:rotate-90 transition-all duration-300 self-end">▶</span>
+                            </summary>
+                            <p class="py-1.5">Note it on the Bill of Lading and report it immediately. Carrier insurance
+                                covers repair costs.</p>
+                        </details>
+
+                        <details class="group questionWrapper">
+                            <summary class="flex justify-between marker:text-blue-700 ">
+                                <h1 class="accordQuest">How do I pay the balance?</h1>
+                                <span class="group-open:rotate-90 transition-all duration-300 self-end">▶</span>
+                            </summary>
+                            <p class="py-1.5">Typically cash, cashier’s check, or money order at delivery. Some carriers
+                                accept cards.</p>
+                        </details>
+
+                        <details class="group questionWrapper">
+                            <summary class="flex justify-between marker:text-blue-700 ">
+                                <h1 class="accordQuest">What if there’s a delay?</h1>
+                                <span class="group-open:rotate-90 transition-all duration-300 self-end">▶</span>
+                            </summary>
+                            <p class="py-1.5">We’ll notify you and coordinate with the carrier to minimize issues.</p>
+                        </details>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+    </main>
+
+
+
+    <div class="h-1 bg-gradient-to-r from-indigo-600 via-red-600 to-lime-500"></div>
+    <footer class="w-full bg-radial from-indigo-900 to-indigo-950 shadow-2xl
+        dark:bg-linear-to-b dark:from-darkbg dark:to-darkbg/90
+        ">
+        <div class="p-8 flex flex-col justify-between items-center gap-4 
+            lg:flex-row lg:justify-center lg:gap-60">
+            <div class="flex flex-col items-center gap-3">
+                <div class="size-20 flex flex-col items-center
+                                            md:size-25">
+                    <img src="images/Logo_lucky.png" alt="">
+
+                </div>
+
+                <div class="flex justify-between gap-8">
+                    <a href=""><i class="fa-brands fa-facebook text-white"></i></a>
+                    <a href=""><i class="fa-brands fa-youtube text-red-500"></i></a>
+                    <a href=""><i class="fa-brands fa-whatsapp text-green-600"></i></a>
+                    <a href="mailto:lucky1trans@gmail.com"><i class="fa-solid fa-envelope text-white"></i></a>
+                </div>
+            </div>
+
+
+            <div class="flex flex-col items-center gap-2">
+                <a data-i18n="common.footer.home" href="index.html" class="eachNavLink  text-white">Home</a>
+                <a data-i18n="common.footer.about" href="about-us.html" class="eachNavLink  text-white">About Us</a>
+                <a data-i18n="common.footer.contact" href="contact.html" class="eachNavLink  text-white">Contact Us</a>
+            </div>
+            <!-- Copyright -->
+
+        </div>
+        <div data-i18n="common.footer.copyright" class="text-xs text-white pt-3 text-center">
+            © 2025 Lucky1. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+
+</html>
