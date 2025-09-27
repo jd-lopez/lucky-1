@@ -7,9 +7,9 @@
 @theme {
   --font-roboto: "Roboto", sans-serif;
   --shadow-steps: 0 0 15px 3px hsla(241, 38%, 25%, 0.32);
-  --shadow-faq: 0 0 1px 1px hsla(240, 9%, 89%, 0.473);
+  --shadow-faq: 0 0 1px 1px hsla(230, 13%, 44%, 0.37);
   --shadow-light: 0 0 6px 1px hsl(0, 0%, 76%);
-  --color-darkbg: #020a24;
+  --color-darkbg: #0c0f18;
   --color-cardbg: #161e36;
 }
 
