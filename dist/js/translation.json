@@ -9,7 +9,8 @@
           "language": {
             "english": "English",
             "spanish": "Spanish"
-          }
+          },
+          "faq": "FAQ"
         },
         "footer": {
           "home": "Home",
@@ -18,7 +19,6 @@
           "copyright": "© 2025 Lucky1. All rights reserved."
         }
       },
-
       "index": {
         "hero": {
           "heading": "Nationwide Transport Brokerage You Can Trust",
@@ -26,7 +26,6 @@
           "contact": "Contact US",
           "call": "Call Us"
         },
-
         "whoWeAre": {
           "title": "Who We Are",
           "description": "We are a transport brokerage company dedicated to simplifying vehicle shipping. Whether you're a dealer, auction buyer, or private owner, we coordinate with top-rated carriers to deliver your vehicle safely and affordably.",
@@ -37,11 +36,9 @@
             "peace": "We handle logistics — you get peace of mind"
           }
         },
-
         "howItWorks": {
           "heading": "How It Works",
           "description": "Our streamline process ensures your freight is handled efficiently and effectively every step of the way.",
-
           "howSteps": {
             "quota": {
               "title": "Request a quote",
@@ -63,17 +60,14 @@
         },
         "whoWeServe": {
           "heading": "Who We Serve",
-
           "open": {
             "title": "Open Auto Shipping",
             "description": "Our Open Auto Shipping service is the most popular and cost-effective way to transport your vehicle. Cars are securely loaded onto an open carrier that typically holds 7–10 vehicles, making it fast and efficient for long-distance moves. This option is ideal for standard sedans, SUVs, and trucks, offering reliable transport at the best value."
           },
-
           "enclosed": {
             "title": "Enclosed Freight",
             "description": "Our Enclosed Auto Shipping service provides the highest level of protection and care for your vehicle. Cars are transported inside a fully enclosed trailer, shielded from weather, road debris, and dust throughout the journey. This premium option is ideal for luxury, classic, exotic, and high-value vehicles that require extra attention."
           },
-
           "recreational": {
             "title": "Recreational Vehicle",
             "description": "We move motorcycles, ATVs, UTVs, RVs, and other recreational vehicles with care, offering both open and enclosed transport options."
@@ -163,10 +157,95 @@
           "email": "<i class='fa-solid fa-envelope mr-4'></i> <strong>Email</strong>: lucky1trans@gmail.com",
           "address": "<i class='fa-solid fa-location-dot mr-4'></i> <strong>Address</strong>: 20280 SW 190TH ST MIAMI, FL 33187"
         }
+      },
+      "faq": {
+        "heading": "Have questions about shipping your vehicle?",
+        "description": "We know arranging auto transport can feel overwhelming, especially if it is your first time. That is why we have put together answers to the most common questions our customers ask. From pricing and insurance to pickup and delivery, you will find everything you need to feel confident about shipping your car with us.",
+        "searchPlaceholder": "Search for a question",
+        "noResults": "No questions found",
+        "sections": {
+          "general": "General Questions",
+          "before": "Things to Know Before You Begin (Getting a Quote)",
+          "after": "Things to Know During and After the Process"
+        },
+        "questions": {
+          "broker": {
+            "question": "What does a car transport broker do?",
+            "answer": "As a transport broker, we connect you with licensed, insured carriers who will safely move your vehicle. We do not own trucks ourselves but work with a trusted network of carriers to secure the best route, price, and timeline for your shipment."
+          },
+          "insurance": {
+            "question": "Is my vehicle insured during transport?",
+            "answer": "Yes. All carriers we work with must have active cargo and liability insurance."
+          },
+          "openEnclosed": {
+            "question": "What is the difference between open and enclosed transport?",
+            "open": "<strong>Open transport:</strong> Most common and affordable option; vehicles are shipped on an open carrier trailer.",
+            "enclosed": "<strong>Enclosed transport:</strong> Offers extra protection from weather, road debris, and visibility, recommended for luxury, classic, or exotic vehicles."
+          },
+          "dates": {
+            "question": "Do you guarantee pickup and delivery dates?",
+            "answer": "We provide estimated windows. While carriers strive to stay on schedule, delays due to traffic, weather, or logistics may occur."
+          },
+          "details": {
+            "question": "What details do I need to get an instant quote?",
+            "answer": "Pickup/delivery locations, vehicle make and model, transport type, and shipping dates."
+          },
+          "size": {
+            "question": "How does vehicle size affect my quote?",
+            "answer": "Larger/heavier vehicles cost more to ship than standard sedans."
+          },
+          "shippingDates": {
+            "question": "Do shipping dates impact pricing?",
+            "answer": "Yes, flexibility often means better rates. Urgent or guaranteed pickups cost more."
+          },
+          "location": {
+            "question": "Does location matter?",
+            "answer": "Yes. Major cities and busy routes are usually cheaper and faster than rural locations."
+          },
+          "nonRunning": {
+            "question": "Can I ship a non-running vehicle?",
+            "answer": "Yes, but special equipment is needed, which increases cost."
+          },
+          "modifications": {
+            "question": "Do modifications affect pricing?",
+            "answer": "Yes. Lift kits, oversized tires, or racks can change carrier requirements."
+          },
+          "fuel": {
+            "question": "Do fuel prices and seasonality affect quotes?",
+            "answer": "Yes. Rates vary depending on fuel costs and seasonal demand."
+          },
+          "pickupNotice": {
+            "question": "How will I know when my car will be picked up?",
+            "answer": "You will get a pickup window (1-3 days) and a confirmation call from the driver."
+          },
+          "tracking": {
+            "question": "Can I track my vehicle during transport?",
+            "answer": "Yes, updates are available by phone or through our team."
+          },
+          "paperwork": {
+            "question": "What paperwork do I need?",
+            "answer": "You will sign a Bill of Lading at pickup and delivery, which documents vehicle condition."
+          },
+          "inspection": {
+            "question": "What should I do at pickup and delivery?",
+            "answer": "Inspect the car with the driver, note condition, and take photos."
+          },
+          "damage": {
+            "question": "What if my car is damaged?",
+            "answer": "Note it on the Bill of Lading and report it immediately. Carrier insurance covers repair costs."
+          },
+          "payment": {
+            "question": "How do I pay the balance?",
+            "answer": "Typically cash, cashier's check, or money order at delivery. Some carriers accept cards."
+          },
+          "delay": {
+            "question": "What if there is a delay?",
+            "answer": "We will notify you and coordinate with the carrier to minimize issues."
+          }
+        }
       }
     }
   },
-
   "es": {
     "translation": {
       "common": {
@@ -177,7 +256,8 @@
           "language": {
             "english": "Ingles",
             "spanish": "Español"
-          }
+          },
+          "faq": "FAQ"
         },
         "footer": {
           "home": "Inicio",
@@ -186,7 +266,6 @@
           "copyright": "© 2025 Lucky1. Todos los derechos reservados."
         }
       },
-
       "index": {
         "hero": {
           "heading": "Corretaje de transporte a nivel nacional en el que puede confiar",
@@ -194,11 +273,9 @@
           "contact": "Contactanos",
           "call": "Llamanos"
         },
-
         "whoWeAre": {
           "title": "Quienes Somos",
           "description": "Somos una empresa de transporte dedicada a simplificar el envío de vehículos. Ya sea concesionario, comprador en subasta o particular, nos coordinamos con transportistas de primera categoría para entregar su vehículo de forma segura y económica.",
-
           "features": {
             "licensed": "Corredor autorizado y asegurado",
             "network": "Acceso a una red nacional de transportistas",
@@ -230,17 +307,14 @@
         },
         "whoWeServe": {
           "heading": "A Quién Servimos",
-
           "open": {
             "title": "Open Auto Shipping",
             "description": "Nuestro servicio Open Auto Shipping es la forma más popular y rentable de transportar su vehículo. Los automóviles se cargan de forma segura en un trailer abierto que normalmente tiene capacidad para 7–10 vehículos, lo que lo hace rápido y eficiente para movimientos de larga distancia. Esta opción es ideal para sedanes, SUV y camionetas estándar, ofreciendo un transporte confiable al mejor precio."
           },
-
           "enclosed": {
             "title": "Carga Cerrada",
             "description": "Nuestro servicio de envío automático cerrado brinda el más alto nivel de protección y cuidado para su vehículo. Los automóviles se transportan dentro de un remolque completamente cerrado, protegidos del clima, los escombros de la carretera y el polvo durante todo el viaje. Esta opción premium es ideal para vehículos de lujo, clásicos, exóticos y de alto valor que requieren atención adicional."
           },
-
           "recreational": {
             "title": "Vehículo Recreativo",
             "description": "Movemos motocicletas, ATVs, UTVs, RVs y otros vehículos recreativos con cuidado, ofreciendo opciones de transporte abierto y cerrado."
@@ -295,7 +369,6 @@
             }
           }
         },
-
         "moveForward": {
           "heading": "Sigamos Adelante",
           "description": "Ya sea que esté enviando una motocicleta a través del país, reubicando equipos pesados o gestionando una flota de entregas, estamos aquí para facilitarle el proceso. Confíe en <strong>Lucky1</strong> como el vínculo confiable en su cadena de suministro.",
@@ -307,7 +380,6 @@
           "modalClose": "Cerrar"
         }
       },
-
       "contact": {
         "heading": "Contáctanos y obtén una cotización gratis.",
         "description": "Estamos aquí para ayudarte. Contáctanos con cualquier pregunta o consulta. Completa el siguiente formulario para obtener una cotización. Nos pondremos en contacto contigo.",
@@ -331,6 +403,92 @@
           "phone": "<i class='fa-solid fa-phone mr-4'></i> <strong>Teléfono</strong>: Inglés 786-457-1448 / Español 305-720-0710",
           "email": "<i class='fa-solid fa-envelope mr-4'></i> <strong>Email</strong>: lucky1trans@gmail.com",
           "address": "<i class='fa-solid fa-location-dot mr-4'></i> <strong>Direccion</strong>: 20280 SW 190TH ST MIAMI, FL 33187"
+        }
+      },
+      "faq": {
+        "heading": "Tiene preguntas sobre el envio de su vehiculo?",
+        "description": "Sabemos que organizar el transporte de un vehiculo puede sentirse abrumador, especialmente si es su primera vez. Por eso reunimos respuestas a las preguntas mas comunes de nuestros clientes. Desde precios y seguro hasta recogida y entrega, aqui encontrara todo lo que necesita para sentirse seguro al enviar su auto con nosotros.",
+        "searchPlaceholder": "Buscar una pregunta",
+        "noResults": "No se encontraron preguntas",
+        "sections": {
+          "general": "Preguntas Generales",
+          "before": "Lo que debe saber antes de comenzar (Obtener una cotización)",
+          "after": "Lo que debe saber durante y despues del proceso"
+        },
+        "questions": {
+          "broker": {
+            "question": "Que hace un broker de transporte de autos?",
+            "answer": "Como broker de transporte, lo conectamos con transportistas autorizados y asegurados que moveran su vehiculo de forma segura. No somos duenos de camiones, pero trabajamos con una red confiable de transportistas para conseguir la mejor ruta, precio y tiempo para su envio."
+          },
+          "insurance": {
+            "question": "Mi vehiculo esta asegurado durante el transporte?",
+            "answer": "Si. Todos los transportistas con los que trabajamos deben tener seguro activo de carga y responsabilidad civil."
+          },
+          "openEnclosed": {
+            "question": "Cual es la diferencia entre transporte abierto y cerrado?",
+            "open": "<strong>Transporte abierto:</strong> La opcion mas comun y economica; los vehiculos se envian en un remolque abierto.",
+            "enclosed": "<strong>Transporte cerrado:</strong> Ofrece proteccion adicional contra clima, residuos del camino y visibilidad; recomendado para vehiculos de lujo, clasicos o exoticos."
+          },
+          "dates": {
+            "question": "Garantizan fechas de recogida y entrega?",
+            "answer": "Proporcionamos ventanas estimadas. Aunque los transportistas intentan cumplir el horario, pueden ocurrir retrasos por trafico, clima o logistica."
+          },
+          "details": {
+            "question": "Que detalles necesito para obtener una cotización instantanea?",
+            "answer": "Lugares de recogida y entrega, marca y modelo del vehiculo, tipo de transporte y fechas de envio."
+          },
+          "size": {
+            "question": "Como afecta el tamano del vehiculo a mi cotización?",
+            "answer": "Los vehiculos mas grandes o pesados cuestan mas para enviar que los sedanes estandar."
+          },
+          "shippingDates": {
+            "question": "Las fechas de envio afectan el precio?",
+            "answer": "Si, la flexibilidad suele significar mejores tarifas. Las recogidas urgentes o garantizadas cuestan mas."
+          },
+          "location": {
+            "question": "La ubicacion importa?",
+            "answer": "Si. Las ciudades grandes y rutas transitadas suelen ser mas economicas y rapidas que las zonas rurales."
+          },
+          "nonRunning": {
+            "question": "Puedo enviar un vehiculo que no funciona?",
+            "answer": "Si, pero se necesita equipo especial, lo que aumenta el costo."
+          },
+          "modifications": {
+            "question": "Las modificaciones afectan el precio?",
+            "answer": "Si. Kits de elevacion, llantas sobredimensionadas o racks pueden cambiar los requisitos del transportista."
+          },
+          "fuel": {
+            "question": "Los precios del combustible y la temporada afectan las cotizaciones?",
+            "answer": "Si. Las tarifas varian segun el costo del combustible y la demanda por temporada."
+          },
+          "pickupNotice": {
+            "question": "Como sabre cuando recogeran mi auto?",
+            "answer": "Recibira una ventana de recogida (1-3 dias) y una llamada de confirmacion del conductor."
+          },
+          "tracking": {
+            "question": "Puedo rastrear mi vehiculo durante el transporte?",
+            "answer": "Si, hay actualizaciones disponibles por telefono o a traves de nuestro equipo."
+          },
+          "paperwork": {
+            "question": "Que documentos necesito?",
+            "answer": "Firmara un Bill of Lading en la recogida y en la entrega, que documenta la condicion del vehiculo."
+          },
+          "inspection": {
+            "question": "Que debo hacer en la recogida y entrega?",
+            "answer": "Inspeccione el auto con el conductor, anote la condicion y tome fotos."
+          },
+          "damage": {
+            "question": "Que pasa si mi auto se dana?",
+            "answer": "Anotelo en el Bill of Lading y reportelo de inmediato. El seguro del transportista cubre los costos de reparacion."
+          },
+          "payment": {
+            "question": "Como pago el balance?",
+            "answer": "Normalmente en efectivo, cheque de caja o money order al momento de la entrega. Algunos transportistas aceptan tarjetas."
+          },
+          "delay": {
+            "question": "Que pasa si hay un retraso?",
+            "answer": "Le notificaremos y coordinaremos con el transportista para minimizar inconvenientes."
+          }
         }
       }
     }

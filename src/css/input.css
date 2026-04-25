@@ -94,8 +94,36 @@ select {
   appearance: none;
 }
 
+.faqSearchWrapper {
+  @apply relative w-full lg:w-3/4 self-center;
+}
+
+.faqSearchResults {
+  @apply absolute top-full left-0 right-0 mt-2 z-20 max-h-72 overflow-y-auto rounded-md border border-gray-400 bg-white shadow-xl dark:bg-cardbg;
+}
+
+.faqSearchResult {
+  @apply block w-full cursor-pointer px-3 py-2 text-left text-sm transition-colors hover:bg-cyan-50 dark:hover:bg-darkbg;
+}
+
+.faqSearchResult + .faqSearchResult {
+  @apply border-t border-gray-400;
+}
+
+.faqSearchEmpty {
+  @apply px-3 py-2 text-sm text-gray-400;
+}
+
+.faqSearchMatch {
+  @apply border-l-4 border-l-blue-700 bg-cyan-50 dark:bg-cardbg;
+}
+
 .questionWrapper {
-  @apply p-2 shadow-faq rounded-md;
+  @apply p-2 shadow-faq rounded-md overflow-hidden;
+}
+
+.questionWrapper summary {
+  @apply cursor-pointer;
 }
 
 .accordQuest {

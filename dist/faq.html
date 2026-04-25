@@ -55,7 +55,7 @@
                 <a data-i18n="common.nav.home" href="index.html" class="eachNavLink hoverEffect text-inherit ">Home</a>
                 <a data-i18n="common.nav.about" href="about-us.html" class="eachNavLink hoverEffect text-inherit">About
                     Us</a>
-                <a href="faq.html" class="eachNavLink hoverEffect text-inherit">FAQ</a>
+                <a data-i18n="common.nav.faq" href="faq.html" class="eachNavLink hoverEffect text-inherit">FAQ</a>
                 <a data-i18n="common.nav.contact" href="contact.html"
                     class="eachNavLink hoverEffect text-inherit">Contact Us</a>
 
@@ -100,8 +100,8 @@
 
         <section class="sectionChildren">
 
-            <h1 class="text-2xl font-bold text-center">Have questions about shipping your vehicle?</h1>
-            <p class="lg:px-35">We know arranging auto transport can feel overwhelming, especially if it’s your first
+            <h1 data-i18n="faq.heading" class="text-2xl font-bold text-center">Have questions about shipping your vehicle?</h1>
+            <p data-i18n="faq.description" class="lg:px-35">We know arranging auto transport can feel overwhelming, especially if it’s your first
                 time.
                 That’s why
                 we’ve put
@@ -109,19 +109,22 @@
                 and delivery,
                 you’ll find everything you need to feel confident about shipping your car with us.</p>
 
-            <input type="text"
-                class="border border-gray-400 p-1 w-full lg:w-3/4 self-center outline-0 rounded-md placeholder:text-gray-400"
-                placeholder="Search for a question">
+            <div class="faqSearchWrapper">
+                <input id="faqSearchInput" type="text"
+                    class="border border-gray-400 p-1 w-full outline-0 rounded-md placeholder:text-gray-400"
+                    data-i18n-placeholder="faq.searchPlaceholder" placeholder="Search for a question" autocomplete="off">
+                <div id="faqSearchResults" class="faqSearchResults hidden"></div>
+            </div>
             <div id="accordion" class="flex flex-col justify-between gap-8">
                 <div class="flex flex-col gap-3">
-                    <h2 class="text-xl font-bold border-l-4 border-l-blue-700 px-3 mb-3 rounded-l-sm">General Questions
+                    <h2 data-i18n="faq.sections.general" class="text-xl font-bold border-l-4 border-l-blue-700 px-3 mb-3 rounded-l-sm">General Questions
                     </h2>
                     <details class="group questionWrapper">
                         <summary class="flex justify-between marker:text-blue-700 ">
-                            <h1 class="accordQuest">What does a car transport broker do?</h1>
+                            <h1 data-i18n="faq.questions.broker.question" class="accordQuest">What does a car transport broker do?</h1>
                             <span class="group-open:rotate-90 transition-all duration-300 self-end">▶</span>
                         </summary>
-                        <p class="py-1.5">As a transport broker, we connect you with licensed, insured
+                        <p data-i18n="faq.questions.broker.answer" class="py-1.5">As a transport broker, we connect you with licensed, insured
                             carriers who will
                             safely move your vehicle. We don’t own
                             trucks ourselves but work with a trusted network of carriers to secure the best route,
@@ -132,24 +135,24 @@
 
                     <details class="group questionWrapper">
                         <summary class="flex justify-between marker:text-blue-700 ">
-                            <h1 class="accordQuest">Is my vehicle insured during transport?
+                            <h1 data-i18n="faq.questions.insurance.question" class="accordQuest">Is my vehicle insured during transport?
                             </h1>
                             <span class="group-open:rotate-90 transition-all duration-300 self-end">▶</span>
                         </summary>
-                        <p class="py-1.5">Yes. All carriers we work with must have active cargo and liability insurance.
+                        <p data-i18n="faq.questions.insurance.answer" class="py-1.5">Yes. All carriers we work with must have active cargo and liability insurance.
                         </p>
                     </details>
                     <details class="group questionWrapper">
                         <summary class="flex justify-between marker:text-blue-700  marker:1 ">
-                            <h1 class="accordQuest">What’s the difference between open and enclosed transport?</h1>
+                            <h1 data-i18n="faq.questions.openEnclosed.question" class="accordQuest">What’s the difference between open and enclosed transport?</h1>
                             <span class="group-open:rotate-90 transition-all duration-300 self-end">▶</span>
                         </summary>
-                        <ul class="pr-80">
-                            <li><strong>Open transport:</strong> Most common and affordable option; vehicles are shipped
+                        <ul class="">
+                            <li data-i18n="faq.questions.openEnclosed.open"><strong>Open transport:</strong> Most common and affordable option; vehicles are shipped
                                 on
                                 an open carrier
                                 trailer.</li>
-                            <li><strong>Enclosed transport:</strong> Offers extra protection from weather, road debris,
+                            <li data-i18n="faq.questions.openEnclosed.enclosed"><strong>Enclosed transport:</strong> Offers extra protection from weather, road debris,
                                 and
                                 visibility—recommended for luxury, classic,
                                 or exotic vehicles.</li>
@@ -157,12 +160,12 @@
                     </details>
                     <details class="group questionWrapper">
                         <summary class="flex justify-between marker:text-blue-700 ">
-                            <h1 class="accordQuest">Do you guarantee pickup and delivery dates?
+                            <h1 data-i18n="faq.questions.dates.question" class="accordQuest">Do you guarantee pickup and delivery dates?
 
                             </h1>
                             <span class="group-open:rotate-90 transition-all duration-300 self-end">▶</span>
                         </summary>
-                        <p class="py-1.5">We provide estimated windows. While carriers strive to stay on schedule,
+                        <p data-i18n="faq.questions.dates.answer" class="py-1.5">We provide estimated windows. While carriers strive to stay on schedule,
                             delays due to traffic, weather, or logistics
                             may occur.
                         </p>
@@ -170,145 +173,145 @@
                 </div>
 
                 <div class="flex flex-col gap-6">
-                    <h2 class="text-xl font-bold border-l-4 border-l-blue-700 px-3 rounded-l-sm">
+                    <h2 data-i18n="faq.sections.before" class="text-xl font-bold border-l-4 border-l-blue-700 px-3 rounded-l-sm">
                         Things to Know Before You Begin (Getting a Quote)
                     </h2>
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-4 gap-y-3 items-start">
                         <details class="group questionWrapper">
                             <summary class="flex justify-between marker:text-blue-700 ">
-                                <h1 class="accordQuest">What details do I need to get an instant quote?
+                                <h1 data-i18n="faq.questions.details.question" class="accordQuest">What details do I need to get an instant quote?
                                 </h1>
                                 <span class="group-open:rotate-90 transition-all duration-300 self-end">▶</span>
                             </summary>
-                            <p class="py-1.5">Pickup/delivery locations, vehicle make and model, transport type, and
+                            <p data-i18n="faq.questions.details.answer" class="py-1.5">Pickup/delivery locations, vehicle make and model, transport type, and
                                 shipping dates.</p>
                         </details>
                         <details class="group questionWrapper">
                             <summary class="flex justify-between marker:text-blue-700 ">
-                                <h1 class="accordQuest">How does vehicle size affect my quote?
+                                <h1 data-i18n="faq.questions.size.question" class="accordQuest">How does vehicle size affect my quote?
                                 </h1>
                                 <span class="group-open:rotate-90 transition-all duration-300 self-end">▶</span>
                             </summary>
-                            <p class="py-1.5">Larger/heavier vehicles cost more to ship than standard sedans.</p>
+                            <p data-i18n="faq.questions.size.answer" class="py-1.5">Larger/heavier vehicles cost more to ship than standard sedans.</p>
                         </details>
 
                         <details class="group questionWrapper">
                             <summary class="flex justify-between marker:text-blue-700 ">
-                                <h1 class="accordQuest">Do shipping dates impact pricing?
+                                <h1 data-i18n="faq.questions.shippingDates.question" class="accordQuest">Do shipping dates impact pricing?
                                 </h1>
                                 <span class="group-open:rotate-90 transition-all duration-300 self-end">▶</span>
                             </summary>
-                            <p class="py-1.5">Yes—flexibility often means better rates. Urgent or guaranteed pickups
+                            <p data-i18n="faq.questions.shippingDates.answer" class="py-1.5">Yes—flexibility often means better rates. Urgent or guaranteed pickups
                                 cost
                                 more.</p>
                         </details>
 
                         <details class="group questionWrapper">
                             <summary class="flex justify-between marker:text-blue-700 ">
-                                <h1 class="accordQuest">Does location matter?
+                                <h1 data-i18n="faq.questions.location.question" class="accordQuest">Does location matter?
                                 </h1>
                                 <span class="group-open:rotate-90 transition-all duration-300 self-end">▶</span>
                             </summary>
-                            <p class="py-1.5">Yes. Major cities and busy routes are usually cheaper and faster than
+                            <p data-i18n="faq.questions.location.answer" class="py-1.5">Yes. Major cities and busy routes are usually cheaper and faster than
                                 rural
                                 locations.</p>
                         </details>
 
                         <details class="group questionWrapper">
                             <summary class="flex justify-between marker:text-blue-700 ">
-                                <h1 class="accordQuest">Can I ship a non-running vehicle?
+                                <h1 data-i18n="faq.questions.nonRunning.question" class="accordQuest">Can I ship a non-running vehicle?
                                 </h1>
                                 <span class="group-open:rotate-90 transition-all duration-300 self-end">▶</span>
                             </summary>
-                            <p class="py-1.5">Yes, but special equipment is needed, which increases cost.</p>
+                            <p data-i18n="faq.questions.nonRunning.answer" class="py-1.5">Yes, but special equipment is needed, which increases cost.</p>
                         </details>
                         <details class="group questionWrapper">
                             <summary class="flex justify-between marker:text-blue-700 ">
-                                <h1 class="accordQuest">Do modifications affect pricing?
+                                <h1 data-i18n="faq.questions.modifications.question" class="accordQuest">Do modifications affect pricing?
                                 </h1>
                                 <span class="group-open:rotate-90 transition-all duration-300 self-end">▶</span>
                             </summary>
-                            <p class="py-1.5">Yes. Lift kits, oversized tires, or racks can change carrier requirements.
+                            <p data-i18n="faq.questions.modifications.answer" class="py-1.5">Yes. Lift kits, oversized tires, or racks can change carrier requirements.
                             </p>
                         </details>
 
                         <details class="group questionWrapper">
                             <summary class="flex justify-between marker:text-blue-700 ">
-                                <h1 class="accordQuest">Do fuel prices and seasonality affect quotes?
+                                <h1 data-i18n="faq.questions.fuel.question" class="accordQuest">Do fuel prices and seasonality affect quotes?
                                 </h1>
                                 <span class="group-open:rotate-90 transition-all duration-300 self-end">▶</span>
                             </summary>
-                            <p class="py-1.5">Yes. Rates vary depending on fuel costs and seasonal demand.</p>
+                            <p data-i18n="faq.questions.fuel.answer" class="py-1.5">Yes. Rates vary depending on fuel costs and seasonal demand.</p>
                         </details>
                     </div>
 
                 </div>
 
                 <div class="flex flex-col gap-6">
-                    <h2 class=" text-xl font-bold border-l-4 border-l-blue-700 px-3 rounded-l-sm">Things to Know During
+                    <h2 data-i18n="faq.sections.after" class=" text-xl font-bold border-l-4 border-l-blue-700 px-3 rounded-l-sm">Things to Know During
                         and
                         After the Process</h2>
                     <div class="grid grid-cols-1 lg:grid-cols-2 items-start gap-x-4 gap-y-3">
                         <details class="group questionWrapper">
                             <summary class="flex justify-between marker:text-blue-700 ">
-                                <h1 class="accordQuest">How will I know when my car will be picked up?
+                                <h1 data-i18n="faq.questions.pickupNotice.question" class="accordQuest">How will I know when my car will be picked up?
                                 </h1>
                                 <span class="group-open:rotate-90 transition-all duration-300 self-end">▶</span>
                             </summary>
-                            <p class="py-1.5">You’ll get a pickup window (1–3 days) and a confirmation call from the
+                            <p data-i18n="faq.questions.pickupNotice.answer" class="py-1.5">You’ll get a pickup window (1–3 days) and a confirmation call from the
                                 driver.</p>
                         </details>
 
                         <details class="group questionWrapper">
                             <summary class="flex justify-between marker:text-blue-700 ">
-                                <h1 class="accordQuest">Can I track my vehicle during transport?
+                                <h1 data-i18n="faq.questions.tracking.question" class="accordQuest">Can I track my vehicle during transport?
                                 </h1>
                                 <span class="group-open:rotate-90 transition-all duration-300 self-end">▶</span>
                             </summary>
-                            <p class="py-1.5">Yes—updates are available by phone or through our team.</p>
+                            <p data-i18n="faq.questions.tracking.answer" class="py-1.5">Yes—updates are available by phone or through our team.</p>
                         </details>
 
                         <details class="group questionWrapper">
                             <summary class="flex justify-between marker:text-blue-700 ">
-                                <h1 class="accordQuest">What paperwork do I need?</h1>
+                                <h1 data-i18n="faq.questions.paperwork.question" class="accordQuest">What paperwork do I need?</h1>
                                 <span class="group-open:rotate-90 transition-all duration-300 self-end">▶</span>
                             </summary>
-                            <p class="py-1.5">You’ll sign a Bill of Lading at pickup and delivery, which documents
+                            <p data-i18n="faq.questions.paperwork.answer" class="py-1.5">You’ll sign a Bill of Lading at pickup and delivery, which documents
                                 vehicle condition.</p>
                         </details>
 
                         <details class="group questionWrapper">
                             <summary class="flex justify-between marker:text-blue-700 ">
-                                <h1 class="accordQuest">What should I do at pickup and delivery?</h1>
+                                <h1 data-i18n="faq.questions.inspection.question" class="accordQuest">What should I do at pickup and delivery?</h1>
                                 <span class="group-open:rotate-90 transition-all duration-300 self-end">▶</span>
                             </summary>
-                            <p class="py-1.5">Inspect the car with the driver, note condition, and take photos.</p>
+                            <p data-i18n="faq.questions.inspection.answer" class="py-1.5">Inspect the car with the driver, note condition, and take photos.</p>
                         </details>
 
                         <details class="group questionWrapper">
                             <summary class="flex justify-between marker:text-blue-700 ">
-                                <h1 class="accordQuest">What if my car is damaged?</h1>
+                                <h1 data-i18n="faq.questions.damage.question" class="accordQuest">What if my car is damaged?</h1>
                                 <span class="group-open:rotate-90 transition-all duration-300 self-end">▶</span>
                             </summary>
-                            <p class="py-1.5">Note it on the Bill of Lading and report it immediately. Carrier insurance
+                            <p data-i18n="faq.questions.damage.answer" class="py-1.5">Note it on the Bill of Lading and report it immediately. Carrier insurance
                                 covers repair costs.</p>
                         </details>
 
                         <details class="group questionWrapper">
                             <summary class="flex justify-between marker:text-blue-700 ">
-                                <h1 class="accordQuest">How do I pay the balance?</h1>
+                                <h1 data-i18n="faq.questions.payment.question" class="accordQuest">How do I pay the balance?</h1>
                                 <span class="group-open:rotate-90 transition-all duration-300 self-end">▶</span>
                             </summary>
-                            <p class="py-1.5">Typically cash, cashier’s check, or money order at delivery. Some carriers
+                            <p data-i18n="faq.questions.payment.answer" class="py-1.5">Typically cash, cashier’s check, or money order at delivery. Some carriers
                                 accept cards.</p>
                         </details>
 
                         <details class="group questionWrapper">
                             <summary class="flex justify-between marker:text-blue-700 ">
-                                <h1 class="accordQuest">What if there’s a delay?</h1>
+                                <h1 data-i18n="faq.questions.delay.question" class="accordQuest">What if there’s a delay?</h1>
                                 <span class="group-open:rotate-90 transition-all duration-300 self-end">▶</span>
                             </summary>
-                            <p class="py-1.5">We’ll notify you and coordinate with the carrier to minimize issues.</p>
+                            <p data-i18n="faq.questions.delay.answer" class="py-1.5">We’ll notify you and coordinate with the carrier to minimize issues.</p>
                         </details>
                     </div>
                 </div>
