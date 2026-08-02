@@ -55,36 +55,43 @@ if (hero) {
 
 const overlay = document.getElementById("overlay");
 
-hamburgerContainer.addEventListener("click", (e) => {
-  if (e.target.id === "burgerIcon") {
+hamburgerContainer?.addEventListener("click", () => {
+  const isOpen = hamburgerContainer.getAttribute("aria-expanded") === "true";
+  if (!isOpen) {
     burgerIcon.classList.add("hidden");
     closeIcon.classList.remove("hidden");
     myNav.classList.add(
-      "-translate-x-52",
-      "transform-all",
+      "-translate-x-64",
+      "transition-all",
       "duration-200",
       "delay-75",
     );
     overlay.classList.remove("hidden");
-    console.log("fuck");
-  } else if (e.target.id === "closeIcon") {
+    hamburgerContainer.setAttribute("aria-expanded", "true");
+    hamburgerContainer.setAttribute("aria-label", "Close navigation menu");
+    document.body.classList.add("overflow-hidden");
+  } else {
     hideMenu();
   }
 });
 
-overlay.addEventListener("click", () => {
+overlay?.addEventListener("click", () => {
   hideMenu();
 });
 
 function hideMenu() {
   burgerIcon.classList.remove("hidden");
   closeIcon.classList.add("hidden");
-  myNav.classList.remove("-translate-x-52");
+  myNav.classList.remove("-translate-x-64");
   overlay.classList.add("hidden");
+  hamburgerContainer.setAttribute("aria-expanded", "false");
+  hamburgerContainer.setAttribute("aria-label", "Open navigation menu");
+  document.body.classList.remove("overflow-hidden");
 }
 
-document.querySelectorAll("img").forEach((img) => {
-  img.setAttribute("loading", "lazy");
+document.querySelectorAll("img:not([fetchpriority='high'])").forEach((img) => {
+  if (!img.hasAttribute("loading")) img.setAttribute("loading", "lazy");
+  img.setAttribute("decoding", "async");
 });
 
 //modal script
@@ -95,9 +102,9 @@ const closeModal = document.querySelector(".closeModal");
 
 openModal.forEach((modalBtn) => {
   modalBtn.addEventListener("click", () => {
+    if (!modal) return;
     modal.showModal();
     modal.classList.add("flex");
-    history.pushState({ modalOpen: true }, "");
   });
 });
 
@@ -106,24 +113,8 @@ if (modal) {
     modal.close();
     modal.classList.remove("flex");
 
-    if (history.state && history.state.modalOpen) {
-      history.back();
-    }
   });
 }
-
-window.addEventListener("popstate", (event) => {
-  if (event.state && event.state.modalOpen) {
-    // Modal is open, so close it
-
-    modal.close();
-    modal.classList.remove("flex");
-
-    if (history.state && history.state.modalOpen) {
-      history.back();
-    }
-  }
-});
 
 //verticall scroll for How it works section
 
@@ -185,8 +176,6 @@ const selectLanguage = document.getElementById("lang-select");
 fetch("js/translation.json")
   .then((response) => response.json())
   .then((response) => {
-    console.log(response);
-
     i18next.init(
       {
         lng: localStorage.getItem("lang") || "en",
@@ -198,13 +187,11 @@ fetch("js/translation.json")
       },
     );
 
-    console.log(i18next.t("index.hero.heading"));
   });
 
 const savedLang = localStorage.getItem("lang") || "en";
 selectLanguage.value = savedLang; // ✅ sets the correct option
 
-console.log(savedLang);
 
 const activeFlag = localStorage.getItem("activeFlag") || "us";
 
@@ -249,7 +236,6 @@ function updateContent() {
 document.getElementById("lang-select").addEventListener("change", () => {
   setTimeout(() => {
     const newLang = selectLanguage.value;
-    console.log(newLang);
 
     i18next.changeLanguage(newLang, () => {
       localStorage.setItem("lang", newLang);

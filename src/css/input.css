@@ -1,11 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap");
 
 @import "tailwindcss";
 
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --font-roboto: "Roboto", sans-serif;
+  --font-roboto: "Manrope", sans-serif;
   --shadow-steps: 0 0 15px 3px hsla(241, 38%, 25%, 0.32);
   --shadow-faq: 0 0 1px 1px hsla(230, 13%, 44%, 0.37);
   --shadow-light: 0 0 6px 1px hsl(0, 0%, 76%);
@@ -14,40 +14,314 @@
 }
 
 .button {
-  @apply text-white font-medium cursor-pointer rounded-md p-1 md:px-4 md:py-1 bg-blue-700 lg:text-lg lg:py-0.5 lg:hover:bg-blue-900;
+  @apply inline-flex min-h-11 items-center justify-center rounded-xl bg-blue-700 px-5 py-2.5 text-sm font-bold text-white shadow-lg shadow-blue-950/20 transition-all duration-200 hover:-translate-y-0.5 hover:bg-blue-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600;
 }
+
 .eachNavLink {
-  @apply px-4 py-3 border-0 rounded-md lg:p-2 lg:text-lg;
+  @apply px-4 py-3 border-0 rounded-lg lg:px-3 lg:py-2 lg:text-sm;
 }
+
 .hoverEffect {
-  @apply lg:hover:text-blue-600   lg:hover:shadow-2xs lg:hover:bg-cyan-50 lg:group-hover:[&:not(:hover)]:text-gray-400
-  transition-all delay-100 duration-75;
+  @apply lg:hover:text-blue-600 lg:hover:shadow-2xs lg:hover:bg-cyan-50 lg:group-hover:[&:not(:hover)]:text-gray-400 transition-all delay-100 duration-75;
 }
 
 .sectionChildren {
-  @apply flex flex-col gap-5 px-6 lg:px-20 pt-16 pb-18 lg:py-20 dark:bg-darkbg dark:text-white transition-colors duration-300;
+  @apply flex flex-col gap-6 px-6 py-18 md:px-10 lg:px-20 lg:py-24 dark:bg-darkbg dark:text-white transition-colors duration-300;
 }
 
 .eachStep {
   @apply lg:flex lg:flex-col;
 }
+
 .card {
-  @apply flex flex-col items-stretch  p-4 gap-2 rounded-md flex-1 min-w-[200px] lg:h-54 text-justify shadow-steps dark:shadow-light dark:bg-cardbg;
+  @apply relative flex min-w-[220px] flex-1 flex-col items-stretch gap-2 overflow-hidden rounded-2xl border border-white/15 bg-white/10 p-6 text-left shadow-xl backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:bg-white/15 dark:bg-cardbg;
 }
 
 .valueCard {
-  @apply flex flex-col items-stretch p-6 gap-2 rounded-md flex-1 min-w-[200px] lg:min-h-fit bg-white text-justify lg:text-left shadow-light dark:bg-cardbg dark:shadow-light;
+  @apply relative flex min-w-[200px] flex-col items-stretch gap-3 rounded-2xl border border-slate-200 bg-white p-6 text-left shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl dark:border-white/10 dark:bg-cardbg;
+}
+
+.valueDot {
+  @apply block size-2 rounded-full bg-blue-600;
+}
+
+.aboutHero {
+  background:
+    radial-gradient(circle at 85% 15%, rgba(96, 165, 250, 0.22), transparent 28%),
+    linear-gradient(135deg, #f8fafc 0%, #eff6ff 54%, #eef2ff 100%);
+}
+
+.dark .aboutHero {
+  background: linear-gradient(135deg, #0c0f18 0%, #111b35 55%, #161e36 100%);
+}
+
+.aboutGlow {
+  @apply pointer-events-none absolute rounded-full blur-3xl;
+}
+
+.aboutGlowOne {
+  @apply -left-32 top-10 size-80 bg-blue-400/15;
+}
+
+.aboutGlowTwo {
+  @apply -right-20 bottom-0 size-72 bg-indigo-500/15;
+}
+
+.aboutImageFrame {
+  @apply relative h-80 overflow-hidden rounded-[2rem] border-8 border-white/70 shadow-2xl shadow-indigo-950/15 md:h-104 dark:border-white/10;
+  transform: rotate(1.5deg);
+}
+
+.aboutImageBadge {
+  @apply absolute bottom-5 left-5 inline-flex items-center gap-2 rounded-full border border-white/20 bg-slate-950/80 px-4 py-2 text-xs font-bold uppercase tracking-wider text-white backdrop-blur-md;
+}
+
+.aboutStatement {
+  @apply relative overflow-hidden rounded-3xl border border-slate-200 bg-white p-8 shadow-sm md:p-10 dark:border-white/10 dark:bg-cardbg;
+}
+
+.aboutStatementAccent {
+  @apply border-transparent bg-gradient-to-br from-blue-700 to-indigo-950;
+}
+
+.aboutStatementNumber {
+  @apply mb-8 block text-sm font-extrabold tracking-[0.2em] text-blue-500;
+}
+
+.aboutStatementAccent .aboutStatementNumber {
+  @apply text-blue-300;
+}
+
+.aboutCta {
+  @apply relative isolate overflow-hidden rounded-[2rem] bg-slate-950 px-7 py-12 shadow-2xl md:px-12 md:py-16;
+  background-image:
+    radial-gradient(circle at 85% 30%, rgba(37, 99, 235, 0.45), transparent 30%),
+    radial-gradient(circle at 65% 100%, rgba(79, 70, 229, 0.3), transparent 35%);
+}
+
+.aboutCta::after {
+  content: "";
+  @apply absolute -right-20 top-1/2 -z-10 size-72 -translate-y-1/2 rounded-full border border-white/10;
+  box-shadow: 0 0 0 50px rgba(255, 255, 255, 0.035), 0 0 0 100px rgba(255, 255, 255, 0.02);
 }
 
 .serveCard {
-  @apply flex flex-col lg:flex-row justify-between items-center gap-14 text-sm lg:font-roboto lg:text-base;
+  @apply flex flex-col overflow-hidden rounded-3xl border border-white/70 bg-white/85 shadow-xl shadow-indigo-950/5 backdrop-blur-xl lg:flex-row lg:items-stretch dark:border-white/10 dark:bg-cardbg/90;
 }
 
 .serveCard:nth-child(even) {
   @apply lg:flex-row-reverse;
 }
 
+.serveCard>div:first-child {
+  @apply flex flex-1 flex-col justify-center gap-3 p-7 md:p-10;
+}
+
+.serveCard>div:last-child {
+  @apply min-h-64 flex-1;
+}
+
+.serveCard>div:last-child img {
+  @apply h-full min-h-64 w-full rounded-none object-cover;
+}
+
+.eyebrow {
+  @apply text-xs font-extrabold uppercase tracking-[0.2em] text-blue-600 dark:text-blue-400;
+}
+
+.sectionTitle {
+  @apply text-balance text-3xl font-extrabold tracking-tight text-slate-950 md:text-4xl dark:text-white;
+}
+
+.featureItem {
+  @apply flex items-center gap-4 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm dark:border-white/10 dark:bg-cardbg;
+}
+
+.featureIcon {
+  @apply flex size-11 shrink-0 items-center justify-center rounded-xl bg-blue-50 p-2.5 dark:bg-white/10;
+}
+
+.whoServeSection {
+  @apply relative isolate bg-slate-50 dark:bg-darkbg;
+  background-image:
+    linear-gradient(rgba(79, 70, 229, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(79, 70, 229, 0.055) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+.whoServeBackdrop {
+  @apply pointer-events-none absolute inset-0 overflow-hidden;
+}
+
+.whoServeBackdrop::after {
+  content: "";
+  @apply absolute inset-0;
+  background: linear-gradient(180deg, rgba(248, 250, 252, 0.18), rgba(248, 250, 252, 0.82));
+}
+
+.dark .whoServeBackdrop::after {
+  background: linear-gradient(180deg, rgba(12, 15, 24, 0.12), rgba(12, 15, 24, 0.76));
+}
+
+.whoServeOrb {
+  @apply absolute block rounded-full opacity-65 blur-3xl;
+  animation: whoServeFloat 14s ease-in-out infinite alternate;
+}
+
+.whoServeOrbOne {
+  @apply -left-32 top-24 size-80 bg-blue-400/35;
+}
+
+.whoServeOrbTwo {
+  @apply -right-24 top-1/3 size-80 bg-indigo-500/30;
+  animation-delay: -5s;
+  animation-duration: 18s;
+}
+
+.whoServeOrbThree {
+  @apply bottom-20 left-1/3 size-64 bg-emerald-400/20;
+  animation-delay: -9s;
+  animation-duration: 16s;
+}
+
+.whoServeRoute {
+  @apply absolute block h-px w-80 bg-gradient-to-r from-transparent via-blue-500/55 to-transparent;
+  animation: whoServeRoute 9s linear infinite;
+}
+
+.whoServeRoute::after {
+  content: "";
+  @apply absolute -top-1 right-0 size-2 rounded-full bg-blue-500 shadow-lg shadow-blue-500;
+}
+
+.whoServeRouteOne {
+  @apply left-0 top-1/4 rotate-12;
+}
+
+.whoServeRouteTwo {
+  @apply bottom-1/4 right-0 -rotate-12;
+  animation-delay: -4s;
+}
+
+@keyframes whoServeFloat {
+  from {
+    transform: translate3d(-2%, -4%, 0) scale(0.96);
+  }
+
+  to {
+    transform: translate3d(10%, 12%, 0) scale(1.08);
+  }
+}
+
+@keyframes whoServeRoute {
+  0% {
+    transform: translateX(-35%) rotate(12deg);
+    opacity: 0;
+  }
+
+  20%,
+  75% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(65%) rotate(12deg);
+    opacity: 0;
+  }
+}
+
+.footerTitle {
+  @apply text-xs font-extrabold uppercase tracking-[0.18em] text-blue-300;
+}
+
+.footerLink {
+  @apply w-fit text-sm text-slate-300 transition-colors hover:text-white focus-visible:rounded focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-400;
+}
+
+.footerContact {
+  @apply flex w-fit items-center gap-3 text-sm text-slate-300 transition-colors hover:text-white;
+}
+
+.footerContactIcon {
+  @apply flex size-9 shrink-0 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-blue-300;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .scroll-animate,
+  .vert-scroll-animate {
+    @apply translate-0 opacity-100;
+  }
+}
+
 /*Scroll animation How it works*/
+
+.howItWorksSection {
+  @apply relative;
+}
+
+.howTruckTrack {
+  @apply pointer-events-none absolute left-0 -top-2 z-20 h-28 w-full overflow-visible;
+}
+
+.howTruck {
+  @apply absolute left-0 -top-4 w-20 drop-shadow-lg md:w-24;
+  animation: howTruckDrive 13s linear infinite;
+  transform-origin: center bottom;
+}
+
+@keyframes howTruckDrive {
+  0% {
+    transform: translate3d(-07rem, -40px, 0) rotate(2deg);
+  }
+
+  14% {
+    transform: translate3d(calc(14vw - 3rem), 2px, 0) rotate(8deg);
+  }
+
+  28% {
+    transform: translate3d(calc(28vw - 3rem), 12px, 0) rotate(-5deg);
+  }
+
+  43% {
+    transform: translate3d(calc(43vw - 3rem), -42px, 0) rotate(-9deg);
+  }
+
+  57% {
+    transform: translate3d(calc(57vw - 3rem), -58px, 0) rotate(5deg);
+  }
+
+  70% {
+    transform: translate3d(calc(70vw - 3rem), -18px, 0) rotate(10deg);
+  }
+
+  84% {
+    transform: translate3d(calc(84vw - 3rem), 38px, 0) rotate(5deg);
+  }
+
+  93% {
+    transform: translate3d(calc(93vw - 3rem), 45px, 0) rotate(-3deg);
+  }
+
+  100% {
+    transform: translate3d(calc(100vw + 7rem), 25px, 0) rotate(-6deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .howTruck {
+    animation: none !important;
+    transform: translate3d(calc(50vw - 3rem), -49px, 0);
+  }
+}
 
 .vert-scroll-animate {
   @apply opacity-0 transition-all duration-75 delay-150 ease-in-out;
@@ -56,6 +330,7 @@
 .vert-scroll-animate:nth-child(odd) {
   @apply translate-x-40 lg:translate-y-80;
 }
+
 .vert-scroll-animate:nth-child(even) {
   @apply -translate-x-40 lg:-translate-y-80;
 }
@@ -72,12 +347,13 @@
 .scroll-animate:nth-child(odd) {
   @apply translate-x-40 lg:translate-x-80;
 }
+
 .scroll-animate:nth-child(even) {
   @apply -translate-x-40 lg:-translate-x-80;
 }
 
 .scroll-animate.visible {
-  @apply translate-x-0  opacity-100;
+  @apply translate-x-0 opacity-100;
 }
 
 .inputWrapper {
@@ -87,9 +363,11 @@
 .label {
   @apply text-sm font-black;
 }
+
 .inputField {
   @apply outline-0 border border-gray-400 rounded-md p-1 text-sm bg-gray-100 focus:bg-white dark:text-black focus:border-blue-600 dark:focus:border-cyan-500;
 }
+
 select {
   appearance: none;
 }
@@ -106,7 +384,7 @@ select {
   @apply block w-full cursor-pointer px-3 py-2 text-left text-sm transition-colors hover:bg-cyan-50 dark:hover:bg-darkbg;
 }
 
-.faqSearchResult + .faqSearchResult {
+.faqSearchResult+.faqSearchResult {
   @apply border-t border-gray-400;
 }
 
