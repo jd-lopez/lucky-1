@@ -9,8 +9,8 @@
   --shadow-steps: 0 0 15px 3px hsla(241, 38%, 25%, 0.32);
   --shadow-faq: 0 0 1px 1px hsla(230, 13%, 44%, 0.37);
   --shadow-light: 0 0 6px 1px hsl(0, 0%, 76%);
-  --color-darkbg: #0c0f18;
-  --color-cardbg: #161e36;
+  --color-darkbg: #141512;
+  --color-cardbg: #20221d;
 }
 
 .button {
@@ -52,7 +52,7 @@
 }
 
 .dark .aboutHero {
-  background: linear-gradient(135deg, #0c0f18 0%, #111b35 55%, #161e36 100%);
+  background: linear-gradient(135deg, #141512 0%, #1a1d18 55%, #252820 100%);
 }
 
 .aboutGlow {
@@ -126,7 +126,7 @@
 }
 
 .eyebrow {
-  @apply text-xs font-extrabold uppercase tracking-[0.2em] text-blue-600 dark:text-blue-400;
+  @apply text-xs font-extrabold uppercase tracking-[0.2em] text-blue-600 dark:text-[#b8c59f];
 }
 
 .sectionTitle {
@@ -139,6 +139,39 @@
 
 .featureIcon {
   @apply flex size-11 shrink-0 items-center justify-center rounded-xl bg-blue-50 p-2.5 dark:bg-white/10;
+}
+
+.whyChooseSection {
+  @apply relative bg-white text-slate-700 dark:bg-darkbg dark:text-slate-200;
+  background-image: radial-gradient(circle at 95% 10%, rgba(79, 70, 229, 0.08), transparent 28%);
+}
+
+.whyPoint {
+  @apply flex gap-4 rounded-2xl border border-slate-200 bg-slate-50 p-4 leading-6 shadow-sm transition duration-300 hover:-translate-y-0.5 hover:border-blue-300 hover:bg-blue-50/60 dark:border-white/10 dark:bg-cardbg dark:hover:border-blue-500/50;
+}
+
+.whyPointIcon {
+  @apply flex size-10 shrink-0 items-center justify-center rounded-xl bg-blue-100 text-blue-700 dark:bg-blue-500/15 dark:text-blue-300;
+}
+
+.whyVisual {
+  @apply relative min-h-96 overflow-hidden rounded-[2rem] border-8 border-white shadow-2xl shadow-indigo-950/15 lg:min-h-128 dark:border-white/10;
+}
+
+.whyVisualShade {
+  @apply pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-slate-950/10;
+}
+
+.whyVisualBadge {
+  @apply absolute inline-flex items-center gap-2 rounded-full border border-white/15 bg-slate-950/75 px-4 py-2 text-xs font-bold uppercase tracking-wider text-white shadow-xl backdrop-blur-md;
+}
+
+.whyVisualBadgeTop {
+  @apply left-5 top-5;
+}
+
+.whyVisualBadgeBottom {
+  @apply bottom-5 right-5;
 }
 
 .whoServeSection {
@@ -160,7 +193,7 @@
 }
 
 .dark .whoServeBackdrop::after {
-  background: linear-gradient(180deg, rgba(12, 15, 24, 0.12), rgba(12, 15, 24, 0.76));
+  background: linear-gradient(180deg, rgba(20, 21, 18, 0.12), rgba(20, 21, 18, 0.82));
 }
 
 .whoServeOrb {
@@ -262,66 +295,7 @@
   }
 }
 
-/*Scroll animation How it works*/
-
-.howItWorksSection {
-  @apply relative;
-}
-
-.howTruckTrack {
-  @apply pointer-events-none absolute left-0 -top-2 z-20 h-28 w-full overflow-visible;
-}
-
-.howTruck {
-  @apply absolute left-0 -top-4 w-20 drop-shadow-lg md:w-24;
-  animation: howTruckDrive 13s linear infinite;
-  transform-origin: center bottom;
-}
-
-@keyframes howTruckDrive {
-  0% {
-    transform: translate3d(-07rem, -40px, 0) rotate(2deg);
-  }
-
-  14% {
-    transform: translate3d(calc(14vw - 3rem), 2px, 0) rotate(8deg);
-  }
-
-  28% {
-    transform: translate3d(calc(28vw - 3rem), 12px, 0) rotate(-5deg);
-  }
-
-  43% {
-    transform: translate3d(calc(43vw - 3rem), -42px, 0) rotate(-9deg);
-  }
-
-  57% {
-    transform: translate3d(calc(57vw - 3rem), -58px, 0) rotate(5deg);
-  }
-
-  70% {
-    transform: translate3d(calc(70vw - 3rem), -18px, 0) rotate(10deg);
-  }
-
-  84% {
-    transform: translate3d(calc(84vw - 3rem), 38px, 0) rotate(5deg);
-  }
-
-  93% {
-    transform: translate3d(calc(93vw - 3rem), 45px, 0) rotate(-3deg);
-  }
-
-  100% {
-    transform: translate3d(calc(100vw + 7rem), 25px, 0) rotate(-6deg);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .howTruck {
-    animation: none !important;
-    transform: translate3d(calc(50vw - 3rem), -49px, 0);
-  }
-}
+/* Scroll animation: How it works */
 
 .vert-scroll-animate {
   @apply opacity-0 transition-all duration-75 delay-150 ease-in-out;
@@ -406,4 +380,128 @@ select {
 
 .accordQuest {
   @apply font-medium lg:text-lg;
+}
+
+/* Contact page */
+
+.contactHero,
+.faqHero {
+  @apply relative isolate overflow-hidden;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(96, 165, 250, 0.2), transparent 26%),
+    radial-gradient(circle at 88% 75%, rgba(99, 102, 241, 0.18), transparent 30%),
+    linear-gradient(135deg, #f8fafc 0%, #eff6ff 55%, #eef2ff 100%);
+}
+
+.contactHero::after,
+.faqHero::after {
+  content: "";
+  @apply pointer-events-none absolute -right-20 -top-32 -z-10 size-80 rounded-full border border-blue-500/10;
+  box-shadow: 0 0 0 50px rgba(59, 130, 246, 0.035), 0 0 0 100px rgba(79, 70, 229, 0.025);
+}
+
+.dark .contactHero,
+.dark .faqHero {
+  background: linear-gradient(135deg, #141512 0%, #1a1d18 55%, #252820 100%);
+}
+
+.contactFormCard {
+  @apply rounded-3xl border border-slate-200 bg-white p-6 shadow-xl shadow-indigo-950/5 md:p-10 dark:border-white/10 dark:bg-cardbg;
+}
+
+.contactForm {
+  @apply grid gap-5 md:grid-cols-2;
+}
+
+.contactForm .inputWrapper:has(textarea),
+.contactForm fieldset,
+.contactForm > div:last-child {
+  @apply md:col-span-2;
+}
+
+.contactForm fieldset {
+  @apply grid gap-3 rounded-2xl border border-slate-200 bg-slate-50 p-4 sm:grid-cols-2 dark:border-white/10 dark:bg-white/5;
+}
+
+.contactForm fieldset legend {
+  @apply px-2 text-sm font-bold text-slate-800 dark:text-slate-100;
+}
+
+.contactForm fieldset > div {
+  @apply rounded-xl border border-transparent px-3 py-2 transition hover:border-blue-200 hover:bg-white dark:hover:border-white/10 dark:hover:bg-white/5;
+}
+
+.contactForm input[type="checkbox"] {
+  @apply accent-blue-600;
+}
+
+.contactForm .label {
+  @apply mb-2 text-sm font-bold text-slate-700 dark:text-slate-200;
+}
+
+.contactForm .inputField {
+  @apply min-h-12 rounded-xl border-slate-300 bg-slate-50 px-4 py-3 text-base transition focus:border-blue-600 focus:bg-white focus:ring-4 focus:ring-blue-600/10 dark:border-white/15 dark:bg-white/5 dark:text-white dark:focus:bg-white/10;
+}
+
+.contactForm textarea.inputField {
+  @apply min-h-32;
+}
+
+.contactAside {
+  @apply flex flex-col gap-6 lg:sticky lg:top-28;
+}
+
+.contactInfoCard {
+  @apply overflow-hidden rounded-3xl bg-gradient-to-br from-blue-700 to-indigo-950 p-7 shadow-2xl shadow-indigo-950/20 md:p-9;
+}
+
+.contactInfoRow {
+  @apply flex items-start gap-3 leading-6 text-blue-100;
+}
+
+.contactInfoRow i {
+  @apply mt-0.5 flex size-9 shrink-0 items-center justify-center rounded-lg bg-white/10 text-blue-200;
+}
+
+.contactMap {
+  @apply h-80 overflow-hidden rounded-3xl border-8 border-white bg-slate-200 shadow-xl dark:border-white/10;
+}
+
+/* FAQ page */
+
+.faqSearchInput {
+  @apply min-h-14 w-full rounded-2xl border border-white/80 bg-white/90 py-3 pl-12 pr-4 text-base text-slate-800 shadow-xl shadow-indigo-950/10 outline-none backdrop-blur-xl transition placeholder:text-slate-400 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 dark:border-white/10 dark:bg-cardbg/90 dark:text-white;
+}
+
+.faqSearchIcon {
+  @apply pointer-events-none absolute left-4 top-1/2 z-10 -translate-y-1/2 text-blue-600;
+}
+
+.faqSearchResults {
+  @apply mt-3 overflow-hidden rounded-2xl border-slate-200 shadow-2xl dark:border-white/10;
+}
+
+#accordion > div {
+  @apply rounded-3xl border border-slate-200 bg-white p-5 shadow-sm md:p-8 dark:border-white/10 dark:bg-cardbg;
+}
+
+#accordion h2 {
+  @apply border-0 px-0 text-xl font-extrabold text-slate-950 dark:text-white;
+}
+
+.questionWrapper {
+  @apply rounded-2xl border border-slate-200 bg-slate-50 p-0 shadow-none transition hover:border-blue-300 hover:bg-blue-50/50 dark:border-white/10 dark:bg-white/5 dark:hover:border-blue-500/50 dark:hover:bg-white/10;
+}
+
+.questionWrapper summary {
+  @apply min-h-14 items-center gap-4 px-5 py-4;
+}
+
+.questionWrapper summary > span {
+  @apply flex size-8 shrink-0 items-center justify-center rounded-full bg-blue-100 text-xs text-blue-700 dark:bg-blue-500/15 dark:text-blue-300;
+}
+
+.questionWrapper > p,
+.questionWrapper > ul {
+  @apply border-t border-slate-200 px-5 py-4 leading-7 text-slate-600 dark:border-white/10 dark:text-slate-300;
 }

@@ -4,7 +4,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MyLucky1</title>
+    <title>Vehicle Shipping FAQ | Lucky 1 Transport</title>
+    <meta name="description" content="Answers about vehicle shipping quotes, insurance, pickup, delivery, transport options, and carrier coordination.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="author" content="Lucky 1 Transport">
+    <meta name="theme-color" content="#0f172a">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Lucky 1 Transport">
+    <meta property="og:title" content="Vehicle Shipping FAQ | Lucky 1 Transport">
+    <meta property="og:description" content="Find answers about vehicle shipping costs, insurance, transport options, pickup, tracking, and delivery.">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="es_US">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Vehicle Shipping Questions Answered">
+    <meta name="twitter:description" content="Clear answers about quotes, carriers, insurance, vehicle preparation, pickup, and delivery.">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What does a car transport broker do?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A transport broker connects customers with licensed and insured carriers and coordinates the route, price, and shipment timeline." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is my vehicle insured during transport?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. All carriers in the network must maintain active cargo and liability insurance." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between open and enclosed transport?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Open transport is the most common and affordable option. Enclosed transport provides additional protection from weather and road debris and is recommended for luxury, classic, or exotic vehicles." }
+        }
+      ]
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="css/output.css">
     <link rel="icon" href="images/Logo_lucky.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -17,7 +55,7 @@
 
 </head>
 
-<body class="relative font-roboto text-base h-dvh overflow-x-hidden">
+<body class="relative min-h-dvh overflow-x-hidden font-roboto text-base">
 
     <div
         class="rounded-full p-2 bg-white/15 backdrop-blur-xl backdrop-saturate-150 z-50 bottom-10 fixed right-2 md:right-10 size-14 shadow-[0_8px_30px_rgba(0,0,0,0.12)]">
@@ -107,15 +145,15 @@
     <div class="h-1 bg-gradient-to-r from-indigo-600 via-red-600 to-lime-500"></div>
 
 
-    <main class="font-roboto text-base 
-    overflow-hidden dark:bg-black mt-20
-     lg:mt-28">
+    <main class="faqPage mt-20 overflow-hidden bg-slate-50 font-roboto text-base text-slate-700 dark:bg-darkbg dark:text-slate-200">
 
-        <section class="sectionChildren">
+        <section class="faqHero px-6 py-20 md:px-10 lg:px-20 lg:py-24">
+            <div class="relative z-10 mx-auto max-w-3xl text-center">
+            <p class="eyebrow">Answers for a smoother move</p>
 
-            <h1 data-i18n="faq.heading" class="text-2xl font-bold text-center">Have questions about shipping your
+            <h1 data-i18n="faq.heading" class="mt-4 text-balance text-4xl font-extrabold tracking-tight text-slate-950 md:text-6xl dark:text-white">Have questions about shipping your
                 vehicle?</h1>
-            <p data-i18n="faq.description" class="lg:px-35">We know arranging auto transport can feel overwhelming,
+            <p data-i18n="faq.description" class="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-600 dark:text-slate-300">We know arranging auto transport can feel overwhelming,
                 especially if it’s your first
                 time.
                 That’s why
@@ -124,13 +162,19 @@
                 and delivery,
                 you’ll find everything you need to feel confident about shipping your car with us.</p>
 
-            <div class="faqSearchWrapper">
+            <div class="faqSearchWrapper mt-9 !w-full">
+                <i class="fa-solid fa-magnifying-glass faqSearchIcon" aria-hidden="true"></i>
                 <input id="faqSearchInput" type="text"
-                    class="border border-gray-400 p-1 w-full outline-0 rounded-md placeholder:text-gray-400"
+                    class="faqSearchInput"
                     data-i18n-placeholder="faq.searchPlaceholder" placeholder="Search for a question"
                     autocomplete="off">
                 <div id="faqSearchResults" class="faqSearchResults hidden"></div>
             </div>
+            </div>
+        </section>
+
+        <section class="px-6 py-16 md:px-10 lg:px-20 lg:py-24">
+            <div class="mx-auto max-w-5xl">
             <div id="accordion" class="flex flex-col justify-between gap-8">
                 <div class="flex flex-col gap-3">
                     <h2 data-i18n="faq.sections.general"
@@ -373,6 +417,7 @@
                 </div>
 
 
+            </div>
             </div>
         </section>
     </main>

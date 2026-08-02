@@ -5,14 +5,30 @@ const hamburgerContainer = document.getElementById("hamburgerContainer");
 const burgerIcon = document.getElementById("burgerIcon");
 const closeIcon = document.getElementById("closeIcon");
 
-if (hero) {
-  window.addEventListener("scroll", () => {
-    const isDark = document.documentElement.classList.contains("dark");
-    const heroHeight = hero.offsetHeight;
-    const headerHeight = myHeader.offsetHeight;
-    const scrollY = window.scrollY;
+function updateHeaderOnScroll() {
+  if (!hero || !myHeader) return;
 
-    if (scrollY > heroHeight - headerHeight) {
+  const isDark = document.documentElement.classList.contains("dark");
+  const heroHeight = hero.offsetHeight;
+  const headerHeight = myHeader.offsetHeight;
+  const scrollY = window.scrollY;
+
+  if (scrollY > heroHeight - headerHeight) {
+    myHeader.classList.add(
+      "border-b-2",
+      "border-b-blue-500",
+      "shadow-md",
+    );
+
+    if (isDark) {
+      myHeader.classList.remove("bg-white/95");
+      myHeader.classList.add("bg-darkbg/95");
+    } else {
+      myHeader.classList.remove("bg-darkbg/95");
+      myHeader.classList.add("bg-white/95");
+    }
+
+    if (myNav && burgerIcon && closeIcon) {
       if (isDark) {
         myNav.classList.remove("lg:text-black");
         myNav.classList.add("lg:text-white");
@@ -28,29 +44,29 @@ if (hero) {
         closeIcon.classList.remove("text-white");
         closeIcon.classList.add("text-black");
       }
-      myHeader.classList.add(
-        "border-b-2",
-        "border-b-blue-500",
-        "shadow-md",
-        "bg-white/99",
-      );
-    } else {
+    }
+  } else {
+    if (myNav && burgerIcon && closeIcon) {
       myNav.classList.add("lg:text-white");
       myNav.classList.remove("lg:text-black");
-      myHeader.classList.remove(
-        "border-b-2",
-        "border-b-blue-500",
-        "shadow-md",
-        "bg-white/99",
-      );
       burgerIcon.classList.remove("text-black");
       burgerIcon.classList.add("text-white");
       closeIcon.classList.remove("text-black");
       closeIcon.classList.add("text-white");
     }
-  });
+    myHeader.classList.remove(
+      "border-b-2",
+      "border-b-blue-500",
+      "shadow-md",
+      "bg-white/95",
+      "bg-darkbg/95",
+    );
+  }
+}
 
-  window.dispatchEvent(new Event("scroll"));
+if (hero) {
+  window.addEventListener("scroll", updateHeaderOnScroll, { passive: true });
+  updateHeaderOnScroll();
 }
 
 const overlay = document.getElementById("overlay");
@@ -300,6 +316,7 @@ themeToggler.forEach((toggler) => {
     const isDark = document.documentElement.classList.contains("dark");
 
     localStorage.setItem("theme", isDark ? "dark" : "light");
+    updateHeaderOnScroll();
   });
 });
 
@@ -312,6 +329,7 @@ window.addEventListener("DOMContentLoaded", () => {
     moonIcon.forEach((moon) => {
       moon.classList.add("fa-moon");
     });
+    updateHeaderOnScroll();
   }
 });
 
